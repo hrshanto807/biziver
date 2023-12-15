@@ -1,3 +1,4 @@
+<?php if(!is_front_page()):?>
 <!--breadcrumb area-->
 <section class="breadcrumb-area">
     <div class="container">
@@ -18,3 +19,5 @@
         </div>
     </div>
 </section><!--/breadcrumb area-->
+
+<?php endif;?>

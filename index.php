@@ -1,9 +1,8 @@
 <?php
+/**
+ * Template Name: Home
+ */
 get_header();
-// Full Search
-get_template_part('template-part/fullsearch.php');
-// breadcrumb area
-get_template_part('template-part/breadcrump')
 ?>
 
 <!--Blog Area-->
@@ -36,7 +35,7 @@ get_template_part('template-part/breadcrump')
                                     <span><a href="<?php echo get_day_link(
                                         get_the_time('y'),get_the_time('m'),get_the_time('d')); ?>"><i class="flaticon-calendar"></i><?php echo get_the_date(); ?></a></span>
 
-                                    <span><a href="<?php echo get_the_permalink() ?>"><?php //if (function_exists('wpfp_link')) { wpfp_link(); } 
+                                    <span><a href="<?php echo get_the_permalink() ?>"><?php // if (function_exists('wpfp_link')) { wpfp_link(); } 
                                                                                         ?> </a></span>
 
                                     <span><a href="<?php echo get_the_permalink() ?>"><i class="flaticon-chat"></i><?php echo get_comments_number(); ?></a></span>

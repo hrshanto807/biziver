@@ -19,9 +19,11 @@
         <!--Header Area-->
         <header class="header-area fixed-header transparent-bg">
             <nav class="navbar navbar-expand-lg main-menu">
-                <div class="<?php echo get_theme_mod('header_option_area')?> container">
+                <div class="<?php echo get_theme_mod('header_option_area') ?> container">
 
-                    <a class="navbar-brand" href="<?php echo esc_url(home_url())?>"><img src="<?php echo get_theme_mod('biziver_logo_area');?>" class="d-inline-block align-top" alt=""></a>
+                    <a class="navbar-brand" href="<?php echo esc_url(home_url()) ?>">
+                    <?php $blog_page = biziver_get_option('biziver-blogpage-logo')?>
+                    <img src="<?php echo esc_url($blog_page['url']); ?>" class="d-inline-block align-top" alt=""></a>
 
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="menu-toggle"></span>
@@ -113,3 +115,8 @@
                 </div>
             </nav>
         </header><!--/Header Area-->
+
+        <?php // Full Search
+        get_template_part('template-part/fullsearch');
+        // breadcrumb area
+        get_template_part('template-part/breadcrump') ?>

@@ -1,9 +1,5 @@
 <?php
 get_header();
-// Full Search
-get_template_part('template-part/fullsearch.php');
-// breadcrumb area
-get_template_part('template-part/breadcrump')
 ?>
 
 <!--Blog Area-->
@@ -25,7 +21,7 @@ get_template_part('template-part/breadcrump')
                                                         get_the_time('d')
                                                     ); ?>"><i class="flaticon-calendar"></i><?php echo get_the_date(); ?></a></span>
 
-                                    <span><a href="<?php echo get_the_permalink() ?>"><?php if (function_exists('wpfp_link')) { wpfp_link(); }  
+                                    <span><a href="<?php echo get_the_permalink() ?>"><?php //if (function_exists('wpfp_link')) { wpfp_link(); }  
                                                                                         ?> </a></span>
 
                                     <span><a href="<?php echo get_the_permalink() ?>"><i class="flaticon-chat"></i><?php echo get_comments_number(); ?></a></span>
@@ -39,11 +35,7 @@ get_template_part('template-part/breadcrump')
                             <div class="col-xl-7 col-lg-7 col-md-6">
                                 <div class="tags">
                                     <span><i class="fa fa-tags"></i></span>
-                                    <a href="#">Business</a>,
-                                    <a href="#">Financial</a>,
-                                    <a href="#">Advice</a>,
-                                    <a href="#">Marketing</a>,
-                                    <a href="#">Planning</a>
+                                    <?php the_tags('', ',', '') ?>
                                 </div>
                             </div>
                             <div class="col-xl-5 col-lg-5 col-md-6">
@@ -134,6 +126,10 @@ get_template_part('template-part/breadcrump')
 
 
                         <div class="blog-comment-form wow fadeInUp" data-wow-delay="0.3s">
+
+                            <?php if (comments_open() || get_comments_number()) :
+                                comments_template();
+                            endif; ?>
                             <h3>Leave a Comment</h3>
                             <form action="#">
                                 <div class="row">
@@ -156,7 +152,7 @@ get_template_part('template-part/breadcrump')
             <?php endwhile;
             endif; ?>
             <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 wow fadeInUp" data-wow-delay="0.4s">
-                <?php get_sidebar();?>
+                <?php get_sidebar(); ?>
             </div>
         </div>
     </div>

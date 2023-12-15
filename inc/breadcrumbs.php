@@ -23,7 +23,7 @@ function wp_breadcrumbs_cb() {
     $separator          = ' / ';
     $breadcrums_id      = 'wp_breadcrumbs_cb_breadcrumbs';
     $breadcrums_class   = 'wp_breadcrumbs_cb_breadcrumb justify-content-center';
-    $home_title         = 'Home Page';
+    $home_title         = 'Home';
       
     // If you have any custom post types with custom taxonomies, put the taxonomy name below (e.g. product_cat)
     $custom_taxonomy    = 'product_cat';
