@@ -244,7 +244,7 @@ font-family: 'Poppins', sans-serif;
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
-    @ font-face {
+    @font-face {
         font-family: "Flaticon";
         src: url("../fonts/Flaticon.svg#Flaticon") format("svg");
     }
@@ -697,19 +697,23 @@ font-family: 'Poppins', sans-serif;
     color: #fdb62f;
 }
 
-.icon_color .fa-facebook-f {
+.icon_color .fa-facebook-f,
+.cl-facebook{
     color: #3B5999;
 }
 
-.icon_color .fa-twitter {
+.icon_color .fa-twitter,
+.cl-twitter{
     color: #55ACEE;
 }
 
-.icon_color .fa-youtube {
+.icon_color .fa-youtube,
+.cl-youtoube {
     color: #CD201F;
 }
 
-.icon_color .fa-pinterest-p {
+.icon_color .fa-pinterest-p,
+.cl-pinterest {
     color: #BD081C;
 }
 
@@ -717,11 +721,14 @@ font-family: 'Poppins', sans-serif;
     color: #F5214A;
 }
 
-.icon_bg .fa-facebook-f{
+.icon_bg .fa-facebook-f,
+.facebook-bg
+{
     background: #3B5999;
 }
 
-.icon_bg .fa-twitter{
+.icon_bg .fa-twitter,
+.twitter-bg {
     background: #55ACEE;
 }
 
@@ -741,7 +748,8 @@ font-family: 'Poppins', sans-serif;
     background: #0077B5;
 }
 
-.icon_bg .fa-instagram{
+.icon_bg .fa-instagram,
+.instragram_bg{
     background: #F5214A;
 }
 
@@ -1308,7 +1316,7 @@ font-family: 'Poppins', sans-serif;
     animation: spinner 1s linear infinite;
 }
 
-@-webkit- @keyframes spinner {
+@-webkit-keyframes  spinner {
     to {
         transform: rotate(360deg);
     }
@@ -1959,18 +1967,21 @@ Footer Area
     color: #fd4d40;
 }
 
-.footer-area .footer-widget.footer-nav {
+.footer-area .footer-widget.footer-nav,
+.footer-area .footer-widget.widget_nav_menu {
     margin-bottom: 30px;
 }
 
-.footer-area .footer-widget.footer-nav ul li {
+.footer-area .footer-widget.footer-nav ul li, 
+.footer-area .footer-widget.widget_nav_menu ul li {
     margin-bottom: 10px;
     position: relative;
     padding-left: 15px;
     transition: 0.4s;
 }
 
-.footer-area .footer-widget.footer-nav ul li::before {
+.footer-area .footer-widget.footer-nav ul li::before ,
+.footer-area .footer-widget.widget_nav_menu ul li::before {
     position: absolute;
     content: "\f105";
     left: 0;
@@ -1979,22 +1990,26 @@ Footer Area
     font-size: 18px;
 }
 
-.footer-area .footer-widget.footer-nav ul li:last-child {
+.footer-area .footer-widget.footer-nav ul li:last-child ,
+.footer-area .footer-widget.widget_nav_menu ul li:last-child {
     margin-bottom: 0;
 }
 
-.footer-area .footer-widget.footer-nav ul li:hover {
+.footer-area .footer-widget.footer-nav ul li:hover ,
+.footer-area .footer-widget.widget_nav_menu ul li:hover {
     margin-left: 5px;
     color: #fd4d40;
 }
 
-.footer-area .footer-widget.footer-nav ul li a {
+.footer-area .footer-widget.footer-nav ul li a ,
+.footer-area .footer-widget.widget_nav_menu ul li a {
     color: #ffffff;
     text-transform: capitalize;
     font-family: "Poppins", sans-serif;
 }
 
-.footer-area .footer-widget.footer-nav ul li a:hover {
+.footer-area .footer-widget.footer-nav ul li a:hover ,
+.footer-area .footer-widget.widget_nav_menu ul li a:hover {
     color: #fd4d40;
 }
 
@@ -3704,10 +3719,10 @@ growth-stat
 Blog Area
 ===============================
 
-*/
-.blog-area {
-    /* Pagination */
-}
+
+/* .blog-area {
+    Pagination 
+} */
 
 .blog-area .single-blog {
     margin-bottom: 30px;
@@ -4172,7 +4187,7 @@ Blog Area
     background: #86BC42;
 }
 
-.blog-area .blog-comments+.blog-comments {
+.blog-all-comments ul.children .blog-comments {
     margin-left: 15%;
 }
 
@@ -5094,6 +5109,7 @@ Sidebar
 .site-sidebar .single-sidebar .social-follow a i {
     display: block;
     font-size: 18px;
+    color: white;
 }
 
 @media (max-width: 991px) {

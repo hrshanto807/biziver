@@ -6,6 +6,7 @@ define('BIZIVER_TEMPLATE_DIR', get_template_directory());
 
 // genaral function biziver
 function biziver_general()
+
 {
     load_theme_textdomain('biziver', get_theme_file_uri('lang'));
     register_nav_menu('biziver_main_menu', esc_html(__('Header Menu', 'biziver')));
@@ -21,6 +22,12 @@ function biziver_general()
     add_image_size('biziver-testimonial-thumb', 60, 60, false);
     add_image_size('biziver-team-thumb', 255, 290, false);
     add_image_size('biziver-case-thumb', 480, 480, false);
+    add_image_size('biziver-portifolio-thumb', 350, 400, false);
+
+    register_nav_menus(array(
+        'main-menu'   => __('Main Menu', 'biziver')
+
+    ));
 };
 add_action('after_setup_theme', 'biziver_general');
 
@@ -77,8 +84,8 @@ function biziver_all_scripts()
 
     // All Stylesheet
     wp_enqueue_style('bootstrap', get_theme_file_uri('assets/css/bootstrap.min.css'));
-    wp_enqueue_style('fontawesome', get_theme_file_uri('assets/css/all.min.css'));    
-    wp_enqueue_style('fontawesome', get_theme_file_uri('assets/css/font-awesome.min.css'));    
+    wp_enqueue_style('fontawesome', get_theme_file_uri('assets/css/all.min.css'));
+    wp_enqueue_style('fontawesome', get_theme_file_uri('assets/css/font-awesome.min.css'));
     wp_enqueue_style('magnific-popup', get_theme_file_uri('assets/css/magnific-popup.css'));
     wp_enqueue_style('jquery-ui', get_theme_file_uri('assets/css/jquery-ui.css'));
     wp_enqueue_style('animate', get_theme_file_uri('assets/css/animate.css'));
@@ -100,6 +107,10 @@ function biziver_all_scripts()
     wp_enqueue_script('wow', get_theme_file_uri('assets/js/wow.min.js'), array('jquery'), wp_get_theme()->get('Version'), true);
     wp_enqueue_script('scrollUp', get_theme_file_uri('assets/js/scrollUp.min.js'), array('jquery'), wp_get_theme()->get('Version'), true);
     wp_enqueue_script('biziver-script', get_theme_file_uri('assets/js/script.js'), array('jquery'), wp_get_theme()->get('Version'), true);
+
+    if (is_singular() && comments_open() && get_option('thread_comments')) {
+        wp_enqueue_script('comment-reply');
+    }
 };
 
 add_action('wp_enqueue_scripts', 'biziver_all_scripts');
@@ -126,29 +137,114 @@ function biziver_allow_tags()
 function biziver_change_placeholder_title($title)
 {
     $post_type = get_post_type();
-    if ('biziver-services'==$post_type) {
+    if ('biziver-services' == $post_type) {
         $title = 'Service Title';
         return $title;
     };
-    if ('biziver-faq'==$post_type) {
+    if ('biziver-faq' == $post_type) {
         $title = 'FAQs Title';
         return $title;
     };
-    if ( 'biziver-testimonial'==$post_type) {
+    if ('biziver-testimonial' == $post_type) {
         $title = 'Testimonial Title';
         return $title;
     };
-    if ('biziver_teams'==$post_type) {
+    if ('biziver_teams' == $post_type) {
         $title = 'Team Title';
         return $title;
     };
-    if ('biziver-cases'==$post_type) {
+    if ('biziver-cases' == $post_type) {
         $title = 'Case Title';
         return $title;
     };
-   
 };
 add_filter('enter_title_here', 'biziver_change_placeholder_title');
+
+// function biziver_add_class_menu($class,$item){
+//     $class[] = 'nav-item';
+//     return $class;
+// };
+// add_filter('nav_menu_css_class','biziver_add_class_menu',10,2);
+
+// add comment fields input
+
+
+function biziver_comment_removed_fields($fields)
+{
+    if (isset($fields['url'])) {
+        unset($fields['url']);
+    };
+    return $fields;
+};
+add_filter('comment_form_default_fields', 'biziver_comment_removed_fields');
+
+function biziver_comment_from_fields_customaization($defaoult_fields)
+{
+    $defaoult_fields['author'] = '<div class=row><div class="col-md-6"> <input type="text" name="author" placeholder="Name*" required /></div>';
+    $defaoult_fields['email'] = '<div class="col-md-6"><input type="email" name="email" placeholder="Email*" required />
+</div></div>';
+    $defaoult_fields['cookies'] = '';
+    return $defaoult_fields;
+};
+add_filter('comment_form_default_fields', 'biziver_comment_from_fields_customaization');
+
+// biziver_comment_from_default
+function biziver_comment_from_default($default_form)
+{
+    $default_form['comment_field'] = '<div class="row"><div class="col-md-12"><textarea rows="6" name="comment"placeholder="Message"></textarea></div>';
+
+    $default_form['submit_button'] = '<button type="submit">Post Comment</button>';
+    $default_form['submit_field'] = '<div class="col-md-12">%1s %2$s</div></div>';
+    $default_form['title_reply'] = 'Leave a Comment';
+    $defaoult_fields['title_reply_before'] = '<div class="col-xl-12"><h3 id="reply-title"
+    class="comment-reply-title">';
+    $defaoult_fields['title_reply_after'] = '</h3></div>';
+    $default_form['comment_notes_before'] = '';
+
+    return $default_form;
+};
+add_filter('comment_form_defaults', 'biziver_comment_from_default');
+
+// comment form possition cahnge
+function biziver_comment_order($field_order)
+{
+    $biziver_order = $field_order['comment'];
+    unset($field_order['comment']);
+    $field_order['comment'] = $biziver_order;
+
+    return $field_order;
+};
+add_filter('comment_form_fields', 'biziver_comment_order');
+
+
+// comments list
+function biziver_comments_list($comment, $args, $depth)
+{
+    $GLOBALS['comment'] = $comment;
+?>
+    <div class="blog-comments wow fadeInUp" data-wow-delay="0.5s">
+        <div class="author-thumb">
+            <?php echo get_avatar($comment, 70) ?>
+        </div>
+        <div class="author-comments">
+            <div class="author-details">
+                <h4><?php echo esc_html($comment->comment_author); ?></h4>
+                <div class="comment-reply-btn">
+                    <?php comment_reply_link(array_merge($args,array( 
+                        'depth'  => $depth,
+                        'max_depth'=> $args['max_depth'],
+                    )))?>
+                </div>
+            </div>
+            <div class="author-designation">
+                <?php comment_date()?> <?php comment_time()?>
+            </div>
+            <?php comment_text()?>
+        </div>
+    </div>
+<?php };
+
+
 
 // Aditinals files
 require_once BIZIVER_TEMPLATE_DIR . '/inc/breadcrumbs.php';
@@ -162,3 +258,10 @@ require_once BIZIVER_TEMPLATE_DIR . '/inc/codestar/samples/option-fields.php';
 require_once BIZIVER_TEMPLATE_DIR . '/inc/widget.php';
 require_once BIZIVER_TEMPLATE_DIR . '/inc/cmb2/init.php';
 require_once BIZIVER_TEMPLATE_DIR . '/inc/cmb2/fields.php';
+
+// walker nav
+// require_once BIZIVER_TEMPLATE_DIR . '/inc/biziver-walker-nav-menu.php';
+require_once BIZIVER_TEMPLATE_DIR . '/inc/class-wp-bootstrap-navwalker.php';
+
+
+require_once BIZIVER_TEMPLATE_DIR . '/inc/shortcode.php';

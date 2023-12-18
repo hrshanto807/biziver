@@ -7,7 +7,9 @@ get_header('two')
 <section class="hero-section">
     <div class="hero-area-1">
         <div class="single-hero" style="background: url('<?php $bg_hero = biziver_get_option('biziver-hero-bg');
-        if(!empty($bg_hero)){echo esc_url($bg_hero['url']);}?>') no-repeat center / cover;">
+                                                            if (!empty($bg_hero)) {
+                                                                echo esc_url($bg_hero['url']);
+                                                            } ?>') no-repeat center / cover;">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-12">
@@ -76,9 +78,9 @@ get_header('two')
 
 <!--About Section-->
 <section class="about-area gray-bg">
-    <div class="about-left dark-light-overlay wow fadeInUp" data-wow-delay="0.4s" style="background: url('<?php echo get_template_directory_uri()?>/assets/images/about-2.jpg') no-repeat center / cover;">
+    <div class="about-left dark-light-overlay wow fadeInUp" data-wow-delay="0.4s" style="background: url('<?php echo get_template_directory_uri() ?>/assets/images/about-2.jpg') no-repeat center / cover;">
         <div class="left-img-wrap">
-            <a href="https://www.youtube.com/watch?v=GT6-H4BRyqQ" class="video-popup"><img src="<?php echo get_template_directory_uri()?>/assets/images/play-button.png" alt=""></a>
+            <a href="https://www.youtube.com/watch?v=GT6-H4BRyqQ" class="video-popup"><img src="<?php echo get_template_directory_uri() ?>/assets/images/play-button.png" alt=""></a>
         </div>
     </div>
     <div class="about-content mid-bg-gray wow fadeInUp" data-wow-delay="0.4s">
@@ -125,7 +127,9 @@ get_header('two')
 
 <!-- Review Area -->
 <section class="review-area section-padding" style="background: url('<?php $bg_testimonial = biziver_get_option('biziver-testimonial-bg');
-        if(!empty($bg_testimonial)){echo esc_url($bg_testimonial['url']);}?>') no-repeat center / cover;">
+                                                                        if (!empty($bg_testimonial)) {
+                                                                            echo esc_url($bg_testimonial['url']);
+                                                                        } ?>') no-repeat center / cover;">
     <div class="container">
         <div class="row justify-content-end">
             <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 wow fadeInUp" data-wow-delay="0.4s">
@@ -179,88 +183,68 @@ get_header('two')
         <div class="text-center mb-40 wow fadeInUp" data-wow-delay="0.4s">
             <ul class="portfolio-filter">
                 <li class="active"><a href="#" data-filter="*"> All</a></li>
-                <li><a href="#" data-filter=".cat1">Business</a></li>
-                <li><a href="#" data-filter=".cat2">Financial</a></li>
-                <li><a href="#" data-filter=".cat3">Investment</a></li>
-                <li><a href="#" data-filter=".cat4">Creative</a></li>
+                <?php
+                $biziver_port_cat = get_terms('portifolio-cat');
+                if (!empty($biziver_port_cat)) : foreach ($biziver_port_cat as $port_cat) :
+                ?>
+                        <li><a href="#" data-filter=".<?php echo esc_attr($port_cat->slug) ?>"><?php echo esc_html($port_cat->name) ?></a></li>
+                <?php endforeach;
+                endif ?>
             </ul>
         </div>
 
         <div class="row portfolio portfolio-gallery column-3 gutter wow fadeInUp" data-wow-delay="0.5s">
+            <?php
+            $biziver_portfolio = new WP_Query(array(
+                'post_type'   =>  'biziver-portfolio',
+                'posts_per-page' => 6,
+                'order' => 'asc'
+            ));
 
-            <div class="portfolio-item cat1 cat3 ">
-                <a href="<?php echo get_template_directory_uri()?>/assets/images/portfolios/7.jpg" class="thumb popup-gallery" title="">
-                    <img src="<?php echo get_template_directory_uri()?>/assets/images/portfolios/7.jpg" alt="">
-                    <div class="portfolio-hover">
-                        <div class="portfolio-description">
-                            <p><i class="fa fa-search"></i></p>
-                        </div>
+            if ($biziver_portfolio->have_posts()) : while ($biziver_portfolio->have_posts()) : $biziver_portfolio->the_post();
+                    $portfollio_video = get_post_meta(get_the_ID(),'project-video',true)
+            ?>
+
+                    <div class="portfolio-item
+                    <?php
+                    $biziver_port_the_cat = get_the_terms(get_the_ID(), 'portifolio-cat');
+
+                    if (!empty($biziver_port_the_cat)) : foreach ($biziver_port_the_cat as $the_port_cat) :
+                            echo $the_port_cat->slug . " ";
+                        endforeach;
+                    endif; ?>">
+
+                    <?php 
+                     $thumbmail_url = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID()),'full');                     
+                     $portfolio_url =  $portfollio_video ? $portfollio_video : $thumbmail_url;
+                    ?>
+                        <a  href="<?php echo esc_url($portfolio_url);?>" class="thumb <?php if(!empty($portfollio_video)) : ?>video-popup<?php else:?>  popup-gallery<?php endif; ?>" title="">
+                            <?php the_post_thumbnail('biziver-portifolio-thumb') ?>
+                            <div class="portfolio-hover">
+                                <div class="portfolio-description">
+                                <?php if (empty($portfollio_video)) : ?> 
+                                    <p><i class="fa fa-search"></i></p>
+                                    <h4><?php the_title() ?></h4>
+                                    <?php else:?><p><i class="fa fa-play"></i></p>
+                                    <?php endif; ?>
+
+                                </div>
+                            </div>
+                        </a>
                     </div>
-                </a>
-            </div>
 
-            <div class="portfolio-item cat2 cat4 ">
-                <a href="portfolio-details.html" class="thumb" title="">
-                    <img src="<?php echo get_template_directory_uri()?>/assets/images/portfolios/8.jpg" alt="">
-                    <div class="portfolio-hover">
-                        <div class="portfolio-description">
-                            <h4>Repeated of <br> Endeavor Mr Position </h4>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="portfolio-item cat1 cat5 ">
-                <a href="portfolio-details.html" class="thumb" title="">
-                    <img src="<?php echo get_template_directory_uri()?>/assets/images/portfolios/9.jpg" alt="">
-                    <div class="portfolio-hover">
-                        <div class="portfolio-description">
-                            <h4>Repeated of <br> Endeavor Mr Position </h4>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="portfolio-item cat3 ">
-                <a href="https://www.youtube.com/watch?v=GT6-H4BRyqQ" class="thumb video-popup" title="">
-                    <img src="<?php echo get_template_directory_uri()?>/assets/images/portfolios/11.jpg" alt="">
-                    <div class="portfolio-hover">
-                        <div class="portfolio-description">
-                            <p><i class="fa fa-play"></i></p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="portfolio-item cat1 cat2 ">
-                <a href="<?php echo get_template_directory_uri()?>/assets/images/portfolios/10.jpg" class="thumb popup-gallery" title="">
-                    <img src="<?php echo get_template_directory_uri()?>/assets/images/portfolios/10.jpg" alt="">
-                    <div class="portfolio-hover">
-                        <div class="portfolio-description">
-                            <p><i class="fa fa-search"></i></p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="portfolio-item cat3 cat4 ">
-                <a href="portfolio-details.html" class="thumb" title="">
-                    <img src="<?php echo get_template_directory_uri()?>/assets/images/portfolios/12.jpg" alt="">
-                    <div class="portfolio-hover">
-                        <div class="portfolio-description">
-                            <h4>Repeated of <br> Endeavor Mr Position </h4>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
+            <?php endwhile;
+            endif ?>
+          
         </div>
     </div>
 </section><!--/Portfolio Section-->
 
 <!-- Team Area -->
 <section class="team-area section-padding-2 dark-light-overlay" style="background: url('<?php $bg_team = biziver_get_option('biziver-team-bg');
-        if(!empty($bg_team)){echo esc_url($bg_team['url']);}?>') no-repeat center / cover;">
+                                                                                        if (!empty($bg_team)) {
+                                                                                            echo esc_url($bg_team['url']);
+                                                                                        } ?>') no-repeat center / cover;">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-xl-6 col-lg-6 centered wow fadeInUp" data-wow-delay="0.3s">
@@ -293,21 +277,22 @@ get_header('two')
                                 <h4><?php the_title() ?></h4>
                                 <p><?php echo esc_html($team_member_position) ?></p>
                                 <div class="social">
-                                            <?php $team_social = get_post_meta(get_the_ID(),'social_repeat_group',true);
-                                            if(!empty($team_social)):foreach($team_social as $social_team):
-                                                if ( isset( $social_team['social_icon'] ) ) {
-                                                    $team_icon = esc_attr( $social_team['social_icon'] );
-                                                };
-                                                if ( isset( $social_team['social_link'] ) ) {
-                                                    $team_link = esc_url( $social_team['social_link'] );
-                                                };
-                                            
-                                            
-                                            ?>
-                                                <a href="<?php echo $team_link?>"class="icon_color"><i class="<?php echo $team_icon?>"></i></a>
-                                            <?php endforeach;endif?>                                           
-                                           
-                                        </div>
+                                    <?php $team_social = get_post_meta(get_the_ID(), 'social_repeat_group', true);
+                                    if (!empty($team_social)) : foreach ($team_social as $social_team) :
+                                            if (isset($social_team['social_icon'])) {
+                                                $team_icon = esc_attr($social_team['social_icon']);
+                                            };
+                                            if (isset($social_team['social_link'])) {
+                                                $team_link = esc_url($social_team['social_link']);
+                                            };
+
+
+                                    ?>
+                                            <a href="<?php echo $team_link ?>" class="icon_color"><i class="<?php echo $team_icon ?>"></i></a>
+                                    <?php endforeach;
+                                    endif ?>
+
+                                </div>
                                 <?php echo wp_trim_words(get_the_content(), 10, true) ?>
                             </div>
                         </div>
@@ -336,13 +321,13 @@ get_header('two')
             </div>
         </div>
         <div class="row justify-content-center">
-        <?php
+            <?php
             $biziver_blog = new WP_Query(array(
                 'post_type'   =>  'post',
-                'posts_per_page' => 3,              
+                'posts_per_page' => 3,
             ));
 
-             if ($biziver_blog->have_posts()) : while ($biziver_blog->have_posts()) : $biziver_blog->the_post() ?>
+            if ($biziver_blog->have_posts()) : while ($biziver_blog->have_posts()) : $biziver_blog->the_post() ?>
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay="0.4s">
                         <div class="single-blog-2">
                             <div class="single-blog-img">
@@ -353,8 +338,11 @@ get_header('two')
                             </div>
                             <div class="single-blog-content">
                                 <div class="blog-meta">
-                                <span><a href="<?php echo get_day_link(
-                                        get_the_time('y'),get_the_time('m'),get_the_time('d')); ?>"><i class="flaticon-calendar"></i><?php echo get_the_date(); ?></a></span>
+                                    <span><a href="<?php echo get_day_link(
+                                                        get_the_time('y'),
+                                                        get_the_time('m'),
+                                                        get_the_time('d')
+                                                    ); ?>"><i class="flaticon-calendar"></i><?php echo get_the_date(); ?></a></span>
 
                                     <span><a href="<?php echo get_the_permalink() ?>"><?php // if (function_exists('wpfp_link')) { wpfp_link(); } 
                                                                                         ?> </a></span>
@@ -362,10 +350,10 @@ get_header('two')
                                     <span><a href="<?php echo get_the_permalink() ?>"><i class="flaticon-chat"></i><?php echo get_comments_number(); ?></a></span>
                                 </div>
                                 <h3><a href="<?php echo get_the_permalink() ?>"><?php the_title() ?></a></h3>
-                                <?php echo wp_trim_words(get_the_content(), 20,true) ?>
+                                <?php echo wp_trim_words(get_the_content(), 20, true) ?>
                             </div>
                         </div>
-                    </div>                   
+                    </div>
             <?php endwhile;
             endif; ?>
         </div>
@@ -379,12 +367,13 @@ get_header('two')
             <div class="col-xl-12">
                 <div class="brands owl-carousel">
                     <?php $brand_img = biziver_get_option('biziver-brands-repeater');
-                    if(!empty($brand_img)):foreach($brand_img as $img_brand):?>                
-                    <div class="single-brands">                                         
-                    <img src="<?php echo esc_url($img_brand['biziver-brands-logo']['url'])?>" class="d-inline-block align-top" alt=""></a>
-                    </div>
-                    <?php endforeach;endif;?>
-                    
+                    if (!empty($brand_img)) : foreach ($brand_img as $img_brand) : ?>
+                            <div class="single-brands">
+                                <img src="<?php echo esc_url($img_brand['biziver-brands-logo']['url']) ?>" class="d-inline-block align-top" alt=""></a>
+                            </div>
+                    <?php endforeach;
+                    endif; ?>
+
                 </div>
             </div>
         </div>

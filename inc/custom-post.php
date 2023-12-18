@@ -106,6 +106,7 @@ function biziver_custom_posts()
         'public'         => true,
         'supports'   => array('title', 'editor', 'thumbnail')
     ));
+
     // Register CPT Cases 
 
     register_post_type('biziver-cases', array(
@@ -116,7 +117,7 @@ function biziver_custom_posts()
             'not_found'        => esc_html(__('not Case found', 'biziver')),
             'add_new_item'     => esc_html(__('Add New Case', 'biziver')),
             'edit_item'        => esc_html(__('Edit Case', 'biziver')),
-           
+
 
         ),
         'public'     => true,
@@ -128,5 +129,48 @@ function biziver_custom_posts()
         'supports'     =>  array('title', 'editor', 'comments', 'revisions', 'trackbacks', 'author', 'excerpt', 'page-attributes', 'thumbnail', 'custom-fields', 'post-formats'),
 
     ));
+
+    // Register CPT Portfolio 
+    register_post_type('biziver-portfolio', array(
+        'labels'     => array(
+            'name'             => esc_html(__('Portfolio', 'biziver')),
+            'singular_name'    => esc_html(__('Portfolio', 'biziver')),
+            'add_new'          => esc_html(__('Add New Portfolio', 'biziver')),
+            'not_found'        => esc_html(__('not Portfolio found', 'biziver')),
+            'add_new_item'     => esc_html(__('Add New Portfolio', 'biziver')),
+            'edit_item'        => esc_html(__('Edit Portfolio', 'biziver')),
+            'featured_image'   => esc_html(__('Project Image', 'biziver')),
+            'set_featured_image' => esc_html(__('Set Project Image', 'biziver')),
+            'remove_featured_image' => esc_html(__('Remove Project Image', 'biziver')),
+
+
+        ),
+        'public'     => true,
+        'rewrite'    => array(
+            'slug'               => 'Portfolio'
+        ),
+        'menu_icon'  =>  'dashicons-products',
+        'capability_type' => 'page',
+        'supports'     =>  array('title', 'editor', 'comments', 'revisions', 'trackbacks', 'author', 'excerpt', 'page-attributes', 'thumbnail', 'custom-fields', 'post-formats'),
+
+    ));
+    register_taxonomy(
+        'portifolio-cat',   // register name
+        'biziver-portfolio', // Post Type
+        array(
+            'hierarchical'   => true,
+            'label'          => 'Categories', // Display Name
+            'query_var'      => true,
+            'show_admin_column' =>true,
+            'rewrite'       => array( 
+                'slug'     =>  'portifolio-catagory',// ths controls the base slug that will display before each term
+                'with_front'=> true // Don't display the catagory base before
+            )
+
+
+        ),
+        
+
+    );
 };
 add_action('init', 'biziver_custom_posts');

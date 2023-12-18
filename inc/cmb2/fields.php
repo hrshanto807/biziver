@@ -1,5 +1,7 @@
 <?php
 
+// Servicee Meta Box
+
 function biziver_service_fileds()
 {
     $Services = new_cmb2_box(array(
@@ -27,6 +29,8 @@ function biziver_service_fileds()
 };
 
 add_action('cmb2_admin_init', 'biziver_service_fileds');
+
+// Testimonial Meta Box
 
 function biziver_testimonail_fileds()
 {
@@ -76,7 +80,7 @@ function biziver_teams_fileds()
     $teams->add_field(array(
         'id'          => 'social_repeat_group',
         'type'        => 'group',
-        'description' => __('Socical link Class Add', 'biziver'),
+        'description' => __('You Can Only 4 Social link Add Here', 'biziver'),
         'repeatable'  => true,
         'options'     => array(
             'group_title'       => __('Social {#}', 'biziver'),
@@ -86,18 +90,43 @@ function biziver_teams_fileds()
         ),
     ));
     $teams->add_group_field( 'social_repeat_group', array(
-		'name' => 'Social Icon',
+		'name' => 'Social Icon Class Name',
 		'id'   => 'social_icon',
 		'type' => 'text',		
-		 'sortable' => true
+		 'sortable' => true,
+         'limit'         => 4
 	) );
     $teams->add_group_field( 'social_repeat_group', array(
 		'name' => 'Social Link',
 		'id'   => 'social_link',
 		'type' => 'text',		
-		 'sortable' => true
+		 'sortable' => true,
+         'limit'         => 4
 	) );
 
 };
 
 add_action('cmb2_admin_init', 'biziver_teams_fileds');
+
+
+
+// Portfollio Meta Box
+function biziver_portfollio_fileds()
+{
+    $portfollio = new_cmb2_box(array(
+        'id' => 'meta-portfollio',
+        'title' => esc_html(__('Project Video', 'biziver')),
+        'object_types'  => array('biziver-portfolio'),
+        
+    ));
+
+    $portfollio->add_field(array(
+        'id' => 'project-video',
+        'name' => __('Project Video', 'biziver'),
+        'desc' => __('Input Your Project Video'),
+        'type' => 'oembed',
+    ));
+};
+
+add_action('cmb2_admin_init', 'biziver_portfollio_fileds');
+

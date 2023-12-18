@@ -40,7 +40,7 @@ if (class_exists('CSF')) {
           array(
             'id'    => 'biziver-social-link',
             'type'  => 'text',
-            'title' => 'Social Link URL',           
+            'title' => 'Social Link URL',
           ),
         )
       )
@@ -51,19 +51,19 @@ if (class_exists('CSF')) {
     'title'  => 'Logo',
     'parent' => 'biziver_genarel',
     'fields' => array(
-      
-          array(
-            'id'    => 'biziver-homepage-logo',
-            'type'  => 'media',
-            'title' => 'Home Page Logo Set',            
-          ),
-          array(
-            'id'    => 'biziver-blogpage-logo',
-            'type'  => 'media',
-            'title' => 'Blog Page Logo Set',
-            
-          ),          
-          
+
+      array(
+        'id'    => 'biziver-homepage-logo',
+        'type'  => 'media',
+        'title' => 'Home Page Logo Set',
+      ),
+      array(
+        'id'    => 'biziver-blogpage-logo',
+        'type'  => 'media',
+        'title' => 'Blog Page Logo Set',
+
+      ),
+
     )
   ));
   // Create a section
@@ -123,7 +123,7 @@ if (class_exists('CSF')) {
         'type'   =>  'text',
         'title'  =>  'Service Title Home',
         'default' => 'Our Services'
-      ),      
+      ),
       array(
         'id'     =>  'service-textone',
         'type'   =>  'text',
@@ -182,60 +182,59 @@ if (class_exists('CSF')) {
   ));
   //Create a section
 
- CSF::createSection($prefix, array(
-  'title'  => 'Partner Brand',  
-  'fields' => array(
-    array(
-      'id'          => 'biziver-brands-repeater',
-      'type'        =>  'repeater',
-      'title'       => 'Brands Profile',
-      'button_title'       => ' Add Brands Profile',
-      'fields'      => array(
-        // A text field
-        array(
-          'id'    => 'biziver-brands-logo',
-          'type'  => 'media',
-          'title' => 'Brands Logo',          
-        ),
-        
+  CSF::createSection($prefix, array(
+    'title'  => 'Partner Brand',
+    'fields' => array(
+      array(
+        'id'          => 'biziver-brands-repeater',
+        'type'        =>  'repeater',
+        'title'       => 'Brands Profile',
+        'button_title'       => ' Add Brands Profile',
+        'fields'      => array(
+
+          // A text field
+          array(
+            'id'    => 'biziver-brands-logo',
+            'type'  => 'media',
+            'title' => 'Brands Logo',
+          ),
+
+        )
       )
     )
-  )
-));
-// create a section
-CSF::createSection($prefix, array(
-  'title'  => 'Background',
-  'id' => 'biziver_Background'
-));
+  ));
+  // create a section
+  CSF::createSection($prefix, array(
+    'title'  => 'Background',
+    'id' => 'biziver_Background'
+  ));
 
-// Create a section
-CSF::createSection($prefix, array(
-  'title'  => 'Logo',
-  'parent' => 'biziver_Background',
-  'fields' => array(
-    
-        array(
-          'id'    => 'biziver-hero-bg',
-          'type'  => 'media',
-          'title' => 'Fnont Page Hero BG Set',            
-        ),
-        array(
-          'id'    => 'biziver-testimonial-bg',
-          'type'  => 'media',
-          'title' => 'Fnont Page Testimonial BG Set',
-          
-        ),          
-        array(
-          'id'    => 'biziver-team-bg',
-          'type'  => 'media',
-          'title' => 'Fnont Page Team BG Set',
-          
-        ),          
-        
-  )
-));
+  // Create a section
+  CSF::createSection($prefix, array(
+    'title'  => 'Logo',
+    'parent' => 'biziver_Background',
+    'fields' => array(
 
+      array(
+        'id'    => 'biziver-hero-bg',
+        'type'  => 'media',
+        'title' => 'Fnont Page Hero BG Set',
+      ),
+      array(
+        'id'    => 'biziver-testimonial-bg',
+        'type'  => 'media',
+        'title' => 'Fnont Page Testimonial BG Set',
 
+      ),
+      array(
+        'id'    => 'biziver-team-bg',
+        'type'  => 'media',
+        'title' => 'Fnont Page Team BG Set',
 
+      ),
 
-};
+    )
+  ));
+
+ 
+}
