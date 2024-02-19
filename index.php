@@ -39,13 +39,15 @@ get_header();
                                                                                         ?> </a></span>
 
                                     <span><a href="<?php echo get_the_permalink() ?>"><i class="flaticon-chat"></i><?php echo get_comments_number(); ?></a></span>
+
+                                    <span><a href="<?php echo get_the_permalink() ?>"><?php //if(function_exists('the_views')){the_views();};?></a></span>
+                                    <span><a href="<?php echo get_the_permalink() ?>"><?php echo "Views: ". get_post_meta( get_the_ID(  ),'bizibar_views',true );?></a></span>
                                 </div>
                                 <h3><a href="<?php echo get_the_permalink() ?>"><?php the_title() ?></a></h3>
                                 <?php echo wp_trim_words(get_the_content(), 20, ' <a href="' .  get_the_permalink() . '">View More</a>'); ?>
                             </div>
                         </div>
                     </div>
-
 
             <?php endwhile;
             endif; ?>

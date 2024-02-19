@@ -26,7 +26,7 @@ get_header();
 
                                     <span><a href="<?php echo get_the_permalink() ?>"><i class="flaticon-chat"></i><?php echo get_comments_number(); ?></a></span>
                                 </div>
-                                <h2><?php the_title() ?></h2>
+                                <h2><?php the_title() ?></h2>                                
                                 <?php echo get_the_content() ?>
                             </div>
                         </div>
@@ -41,10 +41,10 @@ get_header();
                             <div class="col-xl-5 col-lg-5 col-md-6">
                                 <div class="social">
                                     <span><i class="fa fa-share-alt"></i></span>
-                                    <a href="#" class="cl-facebook"><i class="fa fa-facebook"></i></a>
-                                    <a href="#" class="cl-twitter"><i class="fa fa-twitter"></i></a>
-                                    <a href="#" class="cl-youtube"><i class="fa fa-youtube-play"></i></a>
-                                    <a href="#" class="cl-pinterest"><i class="fa fa-pinterest-p"></i></a>
+                                    <a href="#" class="cl-facebook"><i class="fab fa-facebook"></i></a>
+                                    <a href="#" class="cl-twitter"><i class="fab fa-twitter"></i></a>
+                                    <a href="#" class="cl-youtube"><i class="fab fa-youtube-play"></i></a>
+                                    <a href="#" class="cl-pinterest"><i class="fab fa-pinterest-p"></i></a>
                                 </div>
                             </div>
                         </div>

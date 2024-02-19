@@ -37,7 +37,7 @@ get_header();
                         <div class="single-team-3">
                             <div class="row">
                                 <div class="col-lg-4 col-md-5 col-sm-5">
-                                    <?php the_post_thumbnail('biziver-team-thumb') ?>
+                                    <?php the_post_thumbnail('biziver-team-thumb'); ?>
                                 </div>
                                 <div class="col-lg-8 col-md-7 col-sm-7">
                                     <div class="team-content">

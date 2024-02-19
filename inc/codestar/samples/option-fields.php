@@ -19,10 +19,87 @@ if (class_exists('CSF')) {
     'title'  => 'Genarel',
     'id' => 'biziver_genarel'
   ));
+  // heading right time
+  CSF::createSection(
+    $prefix,
+    array(
+      'title' => 'Open To Close Time',
+      'parent' => 'biziver_genarel',
+      'fields' => array(
+        // time Icon seting
+        array(
+          'id' => 'heading_time_icon',
+          'title' => 'Time Icon',
+          'type' => 'icon'
+
+        ),
+        // Time and date setting
+        array(
+          'id' => 'heading_time_date',
+          'title' => 'Date And Time Set',
+          'type' => 'text'
+
+        )
+      )
+    )
+  );
   //
-  // Create a section
+  // heading right Email
+  CSF::createSection(
+    $prefix,
+    array(
+      'title' => 'Email',
+      'parent' => 'biziver_genarel',
+      'fields' => array(
+        // time Icon seting
+        array(
+          'id' => 'heading_email_icon',
+          'title' => 'Email Icon',
+          'type' => 'icon'
+
+        ),
+        // Time and date setting
+        array(
+          'id' => 'email_set_heading',
+          'title' => 'Email Set',
+          'type' => 'text',
+          'validate' => 'csf_validate_email',
+
+        )
+      )
+    )
+  );
+  //
+  // heading right pohne
+  CSF::createSection(
+    $prefix,
+    array(
+      'title' => 'Contact Number',
+      'parent' => 'biziver_genarel',
+      'fields' => array(
+        // time Icon seting
+        array(
+          'id' => 'heading_number_icon',
+          'title' => 'Number Icon',
+          'type' => 'icon'
+
+        ),
+        // Time and date setting
+        array(
+          'id' => 'heading_number_set',
+          'title' => 'Number Set',
+          'type' => 'text',
+          'validate' => 'csf_validate_numeric',
+
+        )
+      )
+    )
+  );
+  //
+
+  // Create a section soical
   CSF::createSection($prefix, array(
-    'title'  => 'Social',
+    'title'  => 'Socials',
     'parent' => 'biziver_genarel',
     'fields' => array(
       array(
@@ -46,7 +123,8 @@ if (class_exists('CSF')) {
       )
     )
   ));
-  // Create a section
+
+  // Create a section logo
   CSF::createSection($prefix, array(
     'title'  => 'Logo',
     'parent' => 'biziver_genarel',
@@ -66,9 +144,15 @@ if (class_exists('CSF')) {
 
     )
   ));
-  // Create a section
+  // all title 
+  CSF::createSection($prefix, array(
+    'title'  => "All Page's Title",
+    'id' => 'biziver_title'
+  ));
+  // Create a section  blog
   CSF::createSection($prefix, array(
     'title'  => 'Blog Title',
+    'parent' => 'biziver_title',
     'fields' => array(
 
       //
@@ -90,9 +174,10 @@ if (class_exists('CSF')) {
   ));
 
 
-  // Create a section
+  // Create a section faq
   CSF::createSection($prefix, array(
     'title'  => 'FAQ Title',
+    'parent' => 'biziver_title',
     'fields' => array(
 
       // A textarea field
@@ -113,9 +198,10 @@ if (class_exists('CSF')) {
     )
   ));
 
-  // Create a section
+  // Create a section service
   CSF::createSection($prefix, array(
     'title'      =>   'Service Title',
+    'parent' => 'biziver_title',
     'fields'     => array(
       // A textera field
       array(
@@ -141,8 +227,10 @@ if (class_exists('CSF')) {
     )
   ));
 
+  // Create a section testimonial
   CSF::createSection($prefix, array(
     'title'      =>   'Testimonial Title',
+    'parent' => 'biziver_title',
     'fields'     => array(
       // A textera field
       array(
@@ -161,9 +249,10 @@ if (class_exists('CSF')) {
     )
   ));
 
-  // Create a section
+  // Create a section professional team logo
   CSF::createSection($prefix, array(
-    'title'      =>   esc_html(__("Team Page's Title", 'biziver')),
+    'title'      =>   (__("Team Page's Title", 'biziver')),
+    'parent' => 'biziver_title',
     'fields'     => array(
       // A textera field
       array(
@@ -203,38 +292,223 @@ if (class_exists('CSF')) {
       )
     )
   ));
-  // create a section
-  CSF::createSection($prefix, array(
-    'title'  => 'Background',
-    'id' => 'biziver_Background'
-  ));
+
+
 
   // Create a section
   CSF::createSection($prefix, array(
-    'title'  => 'Logo',
+    'title'  => 'Front Page Background',
     'parent' => 'biziver_Background',
     'fields' => array(
 
       array(
         'id'    => 'biziver-hero-bg',
         'type'  => 'media',
-        'title' => 'Fnont Page Hero BG Set',
+        'title' => ' Hero Bacground Image Add',
       ),
       array(
         'id'    => 'biziver-testimonial-bg',
         'type'  => 'media',
-        'title' => 'Fnont Page Testimonial BG Set',
+        'title' => ' Testimonial Bacground Image Add',
 
       ),
       array(
         'id'    => 'biziver-team-bg',
         'type'  => 'media',
-        'title' => 'Fnont Page Team BG Set',
+        'title' => ' Team Bacground Image Add',
+
+      ),
+      array(
+        'id'    => 'biziver-aboutus-bg',
+        'type'  => 'media',
+        'title' => ' About Us Bacground Image Add',
 
       ),
 
     )
   ));
 
- 
+  // Subscribe Our newslatter!
+
+  // Create a section
+  CSF::createSection($prefix, array(
+    'title'  => 'Newslatter',
+    'id' => 'biziver_newslatter',
+    'fields' => array(
+
+      array(
+        'id'    => 'biziver-newslatter-title',
+        'type'  => 'text',
+        'title' => 'Subscribe Our Newslatter Title',
+      ),
+
+    )
+  ));
+
+  // for mission
+
+  //Create a section Mission
+
+  CSF::createSection($prefix, array(
+    'title'  => 'Misson Vission',
+    'fields' => array(
+      array(
+        'id'          => 'biziver-missions-repeater',
+        'type'        =>  'repeater',
+        'title'       => 'Missions Profile',
+        'button_title'       => 'Add Missions Profile',
+        'fields'      => array(
+
+          // A text field
+          array(
+            'id'    => 'biziver-missions-title',
+            'type'  => 'text',
+            'title' => 'Missions Title',
+          ),
+          array(
+            'id'    => 'biziver-missions-textarea',
+            'type'  => 'textarea',
+            'title' => 'Missions Content',
+          ),
+
+        )
+      )
+    )
+  ));
+  //Create a section hero
+
+  CSF::createSection(
+    $prefix,
+    array(
+      'parent' => 'biziver_Background',
+      'title'  => ' Front Page Hero Area',
+      'fields' => array(
+        // A text field
+        array(
+          'id'    => 'biziver-hero-subtitle',
+          'type'  => 'text',
+          'title' => ' SubTitle',
+        ),
+        // A text field
+        array(
+          'id'    => 'biziver-hero-title',
+          'type'  => 'text',
+          'title' => ' Title',
+        ),
+        // A textArea field     
+        array(
+          'id'    => 'biziver-hero-textarea',
+          'type'  => 'textarea',
+          'title' => 'Content',
+        ),
+        // A button field 
+
+        array(
+          'id'    => 'biziver-hero-button',
+          'type'  => 'text',
+          'title' => ' Content Button Class',
+          'desc' => 'please Type Class Name From Bootstrap Button like (btn-secondary) Or type btn-fill/btn-fill-2'
+        ),
+        array(
+          'id'    => 'biziver-hero-button_name',
+          'type'  => 'text',
+          'title' => 'Content Button',
+          'desc' => 'please Type Button Name'
+        ),
+
+      )
+    )
+  );
+
+  //Create a section About Us
+
+  CSF::createSection(
+    $prefix,
+    array(
+      'parent' => 'biziver_Background',
+      'title'  => ' Front Page About Us',
+      'fields' => array(
+        // A text field
+        array(
+          'id'    => 'biziver-aboutus-link',
+          'type'  => 'text',
+          'title' => 'About Us Link',
+        ),
+        array(
+          'id'    => 'biziver-aboutus-buttonimg',
+          'type'  => 'media',
+          'title' => 'About Us Button Image',
+        ),
+        // A text field
+        array(
+          'id'    => 'biziver-aboutus-title',
+          'type'  => 'text',
+          'title' => 'About Us Title',
+        ),
+        // A textArea field     
+        array(
+          'id'    => 'biziver-aboutus-textarea',
+          'type'  => 'textarea',
+          'title' => 'About Us Front Page Content',
+        ),
+        // A button field 
+
+        array(
+          'id'    => 'biziver-aboutus-button',
+          'type'  => 'text',
+          'title' => 'About Us Content Button Class',
+          'desc' => 'please Type Class Name From Bootstrap Button like (btn-secondary) Or type btn-fill/btn-fill-2'
+        ),
+        array(
+          'id'    => 'biziver-aboutus-button_name',
+          'type'  => 'text',
+          'title' => 'About Us Content Button',
+          'desc' => 'please Type Button Name'
+        ),
+        array(
+          'id'    => 'biziver-aboutus-title-2',
+          'type'  => 'text',
+          'title' => 'About Us TiTle Two',
+          'desc' => 'please About Page Title'
+        ),
+
+        array(
+          'id'    => 'biziver-aboutus-ceo_name',
+          'type'  => 'text',
+          'title' => 'About Us Member Name',
+          'desc' => 'please Type Member Name'
+        ),
+        array(
+          'id'    => 'biziver-aboutus-position',
+          'type'  => 'text',
+          'title' => 'About Us Member Position',
+          'desc' => 'please Type Position Name'
+        ),
+      )
+    )
+  );
+
+  // contact Form
+  CSF::createSection(
+    $prefix,
+    array(
+      'title'  => ' Contact Page',
+      'fields' => array(
+        // A textArea field     
+        array(
+          'id'    => 'biziver-contact-textarea',
+          'type'  => 'textarea',
+          'title' => 'Heading Content',
+        ),
+
+        // A text field
+        array(
+          'id'    => 'biziver-contact-title',
+          'type'  => 'text',
+          'title' => 'Contact link',
+        ),
+
+      )
+    )
+  );
 }

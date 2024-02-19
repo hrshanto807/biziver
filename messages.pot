@@ -1,0 +1,1409 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-11 17:37+0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: functions.php:11
+msgid "Header Menu"
+msgstr ""
+
+#: functions.php:12
+msgid "Footer Menu"
+msgstr ""
+
+#: functions.php:29
+msgid "Main Menu"
+msgstr ""
+
+#: functions.php:61
+msgid "Header Position"
+msgstr ""
+
+#: functions.php:69
+msgid "Position Option"
+msgstr ""
+
+#: functions.php:74
+msgid "Left Menu"
+msgstr ""
+
+#: functions.php:75
+msgid "Right Menu"
+msgstr ""
+
+#: functions.php:76
+msgid "Center Menu"
+msgstr ""
+
+#: inc/breadcrumbs.php:232
+msgid "Page"
+msgstr ""
+
+#: inc/class-wp-bootstrap-navwalker.php:368
+msgid "Add a menu"
+msgstr ""
+
+#: inc/custom-post.php:15
+msgid "FAQs"
+msgstr ""
+
+#: inc/custom-post.php:16
+msgid "FAQ"
+msgstr ""
+
+#: inc/custom-post.php:17
+msgid "Add New FAQ"
+msgstr ""
+
+#: inc/custom-post.php:18
+msgid "Add New Item FAQ"
+msgstr ""
+
+#: inc/custom-post.php:19
+msgid "Edit FAQ"
+msgstr ""
+
+#: inc/custom-post.php:20 inc/custom-post.php:21
+msgid "View FAQ"
+msgstr ""
+
+#: inc/custom-post.php:22
+msgid "New FAQ"
+msgstr ""
+
+#: inc/custom-post.php:23
+msgid "Sorry! Not FAQs Found"
+msgstr ""
+
+#: inc/custom-post.php:24 inc/custom-post.php:25
+msgid "View FAQs"
+msgstr ""
+
+#: inc/custom-post.php:40
+msgid "Services"
+msgstr ""
+
+#: inc/custom-post.php:41
+msgid "service"
+msgstr ""
+
+#: inc/custom-post.php:42 inc/custom-post.php:44
+msgid "Add New Service"
+msgstr ""
+
+#: inc/custom-post.php:43
+msgid "not service found"
+msgstr ""
+
+#: inc/custom-post.php:45
+msgid "Edit Service"
+msgstr ""
+
+#: inc/custom-post.php:46
+msgid "Service Image"
+msgstr ""
+
+#: inc/custom-post.php:47
+msgid "Set Service Image"
+msgstr ""
+
+#: inc/custom-post.php:48
+msgid "Remove Service Image"
+msgstr ""
+
+#: inc/custom-post.php:66
+msgid "Testimonals"
+msgstr ""
+
+#: inc/custom-post.php:67
+msgid "testimonial"
+msgstr ""
+
+#: inc/custom-post.php:68
+msgid "Add New Testimonial"
+msgstr ""
+
+#: inc/custom-post.php:69
+msgid "not found testimonial"
+msgstr ""
+
+#: inc/custom-post.php:70
+msgid "Edit Testimonial"
+msgstr ""
+
+#: inc/custom-post.php:71
+msgid "Add New testimonial"
+msgstr ""
+
+#: inc/custom-post.php:72
+msgid "Client Image"
+msgstr ""
+
+#: inc/custom-post.php:73
+msgid "Set Client Image"
+msgstr ""
+
+#: inc/custom-post.php:74
+msgid "Remove Client Image"
+msgstr ""
+
+#: inc/custom-post.php:91 inc/custom-post.php:92
+msgid "Team"
+msgstr ""
+
+#: inc/custom-post.php:93 inc/custom-post.php:96
+msgid "Add New Team"
+msgstr ""
+
+#: inc/custom-post.php:94
+msgid "not found Team"
+msgstr ""
+
+#: inc/custom-post.php:95
+msgid "Edit Team"
+msgstr ""
+
+#: inc/custom-post.php:97
+msgid "Team Member Image"
+msgstr ""
+
+#: inc/custom-post.php:98
+msgid "Set Team Member Image"
+msgstr ""
+
+#: inc/custom-post.php:99
+msgid "Remove Team Member Image"
+msgstr ""
+
+#: inc/custom-post.php:114
+msgid "Cases"
+msgstr ""
+
+#: inc/custom-post.php:115
+msgid "Case"
+msgstr ""
+
+#: inc/custom-post.php:116 inc/custom-post.php:118
+msgid "Add New Case"
+msgstr ""
+
+#: inc/custom-post.php:117
+msgid "not Case found"
+msgstr ""
+
+#: inc/custom-post.php:119
+msgid "Edit Case"
+msgstr ""
+
+#: inc/custom-post.php:136 inc/custom-post.php:137
+msgid "Portfolio"
+msgstr ""
+
+#: inc/custom-post.php:138 inc/custom-post.php:140
+msgid "Add New Portfolio"
+msgstr ""
+
+#: inc/custom-post.php:139
+msgid "not Portfolio found"
+msgstr ""
+
+#: inc/custom-post.php:141
+msgid "Edit Portfolio"
+msgstr ""
+
+#: inc/custom-post.php:142
+msgid "Project Image"
+msgstr ""
+
+#: inc/custom-post.php:143
+msgid "Set Project Image"
+msgstr ""
+
+#: inc/custom-post.php:144
+msgid "Remove Project Image"
+msgstr ""
+
+#: inc/custom-post.php:175
+msgid "Features"
+msgstr ""
+
+#: inc/custom-post.php:176
+msgid "Feature"
+msgstr ""
+
+#: inc/custom-post.php:177 inc/custom-post.php:179
+msgid "Add New Feature"
+msgstr ""
+
+#: inc/custom-post.php:178
+msgid "not Feature found"
+msgstr ""
+
+#: inc/custom-post.php:180
+msgid "Edit Feature"
+msgstr ""
+
+#: inc/widget.php:9
+msgid "Single Post Widget"
+msgstr ""
+
+#: inc/widget.php:11
+msgid ""
+"Widgets in this area will be shown under your single posts, before comments."
+msgstr ""
+
+#: inc/widget.php:18
+msgid "Footer Widget"
+msgstr ""
+
+#: inc/widget.php:20
+msgid "Widgets in this area will be shown under your Footer, before comments."
+msgstr ""
+
+#: inc/cmb2/fields.php:9 inc/cmb2/fields.php:18
+msgid "Services Icon"
+msgstr ""
+
+#: inc/cmb2/fields.php:19
+msgid "Input Your Icon Class Name"
+msgstr ""
+
+#: inc/cmb2/fields.php:25
+msgid "Services Text"
+msgstr ""
+
+#: inc/cmb2/fields.php:26
+msgid "Input Your Text"
+msgstr ""
+
+#: inc/cmb2/fields.php:39
+msgid "Client Job Tittle"
+msgstr ""
+
+#: inc/cmb2/fields.php:48
+msgid "Client Name"
+msgstr ""
+
+#: inc/cmb2/fields.php:49
+msgid "Input Your Name"
+msgstr ""
+
+#: inc/cmb2/fields.php:54
+msgid "Job Title"
+msgstr ""
+
+#: inc/cmb2/fields.php:55
+msgid "Input Your Job Title Name"
+msgstr ""
+
+#: inc/cmb2/fields.php:83
+msgid "You Can Only 4 Social link Add Here"
+msgstr ""
+
+#: inc/cmb2/fields.php:86
+msgid "Social {#}"
+msgstr ""
+
+#: inc/cmb2/fields.php:87
+msgid "Add Another Social"
+msgstr ""
+
+#: inc/cmb2/fields.php:88
+msgid "Remove Social"
+msgstr ""
+
+#: inc/cmb2/fields.php:118 inc/cmb2/fields.php:125
+msgid "Project Video"
+msgstr ""
+
+#: inc/cmb2/fields.php:126
+msgid "Input Your Project Video"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2.php:199
+msgid "Metabox configuration is required to have an ID parameter."
+msgstr ""
+
+#: inc/cmb2/includes/CMB2.php:618
+msgid "Click to toggle"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_Ajax.php:75
+msgid "Please Try Again"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_Ajax.php:181
+msgid "Remove Embed"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_Ajax.php:189
+#: inc/cmb2/includes/helper-functions.php:107
+#, php-format
+msgid "No oEmbed Results Found for %1$s. View more info at %2$s."
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_Base.php:423
+#, php-format
+msgid ""
+"The \"%1$s\" field parameter has been deprecated in favor of the \"%2$s\" "
+"parameter."
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_Base.php:427
+#, php-format
+msgid ""
+"Using the \"%1$s\" field parameter as a callback has been deprecated in "
+"favor of the \"%2$s\" parameter."
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_Base.php:457
+#, php-format
+msgid ""
+"%1$s was called with a parameter that is <strong>deprecated</strong> since "
+"version %2$s! %3$s"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_Base.php:459
+#, php-format
+msgid ""
+"%1$s was called with a parameter that is <strong>deprecated</strong> since "
+"version %2$s with no alternative available."
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_Base.php:492
+#: inc/cmb2/includes/CMB2_Hookup_Base.php:102
+#: inc/cmb2/includes/CMB2_Options.php:247
+#: inc/cmb2/includes/CMB2_Options_Hookup.php:369
+#: inc/cmb2/includes/types/CMB2_Type_Base.php:173
+#, php-format
+msgid "Invalid %1$s property: %2$s"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_Base.php:510
+#: inc/cmb2/includes/types/CMB2_Type_Base.php:157
+#, php-format
+msgid "Invalid %1$s method: %2$s"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_Field.php:1443
+msgid "Add Group"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_Field.php:1444
+msgid "Remove Group"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_Field.php:1476 inc/cmb2/includes/CMB2_Field.php:1480
+#: inc/codestar/fields/border/border.php:59
+#: inc/codestar/fields/typography/typography.php:199
+#: inc/codestar/fields/typography/typography.php:213
+msgid "None"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_Field.php:1594
+msgid "Sorry, this field does not have a cmb_id specified."
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_Field_Display.php:453
+#: inc/cmb2/includes/CMB2_JS.php:242
+#: inc/cmb2/includes/types/CMB2_Type_File_Base.php:90
+msgid "File:"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_Hookup.php:191
+msgid ""
+"Term Metadata is a WordPress 4.4+ feature. Please upgrade your WordPress "
+"install."
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_Hookup.php:195
+msgid "Term metaboxes configuration requires a \"taxonomies\" parameter."
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_Hookup.php:579
+#, php-format
+msgid "Toggle panel: %s"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_Hookup_Base.php:44
+#, php-format
+msgid "%1$s should be implemented by the extended class."
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_JS.php:177 inc/cmb2/includes/CMB2_JS.php:222
+#: inc/codestar/fields/gallery/gallery.php:22
+msgid "Clear"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_JS.php:178
+#: inc/codestar/fields/typography/typography.php:119
+#: inc/codestar/fields/typography/typography.php:132
+#: inc/codestar/fields/typography/typography.php:145
+#: inc/codestar/fields/typography/typography.php:160
+#: inc/codestar/fields/typography/typography.php:176
+#: inc/codestar/fields/typography/typography.php:189
+#: inc/codestar/fields/typography/typography.php:203
+#: inc/codestar/fields/typography/typography.php:221
+msgid "Default"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_JS.php:179
+msgid "Select Color"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_JS.php:180
+msgid "Current Color"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_JS.php:212
+msgctxt "Valid formatDate string for jquery-ui datepicker"
+msgid "mm/dd/yy"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_JS.php:213
+msgid "Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_JS.php:214
+msgid "Su, Mo, Tu, We, Th, Fr, Sa"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_JS.php:215
+msgid "Sun, Mon, Tue, Wed, Thu, Fri, Sat"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_JS.php:216
+msgid ""
+"January, February, March, April, May, June, July, August, September, "
+"October, November, December"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_JS.php:217
+msgid "Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_JS.php:218
+msgid "Next"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_JS.php:219
+msgid "Prev"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_JS.php:220
+msgid "Today"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_JS.php:221 inc/cmb2/includes/CMB2_JS.php:231
+msgid "Done"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_JS.php:225
+msgid "Choose Time"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_JS.php:226
+msgid "Time"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_JS.php:227
+msgid "Hour"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_JS.php:228
+msgid "Minute"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_JS.php:229
+msgid "Second"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_JS.php:230
+msgid "Now"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_JS.php:232
+msgctxt ""
+"Valid formatting string, as per http://trentrichardson.com/examples/"
+"timepicker/"
+msgid "hh:mm TT"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_JS.php:238
+msgid "Use this file"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_JS.php:239
+msgid "Use these files"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_JS.php:240
+#: inc/cmb2/includes/types/CMB2_Type_File_Base.php:75
+msgid "Remove Image"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_JS.php:241 inc/cmb2/includes/CMB2_Types.php:408
+#: inc/cmb2/includes/types/CMB2_Type_File_Base.php:95
+#: inc/codestar/fields/media/media.php:26
+#: inc/codestar/fields/upload/upload.php:25
+msgid "Remove"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_JS.php:243
+#: inc/cmb2/includes/types/CMB2_Type_File_Base.php:93
+msgid "Download"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_JS.php:244
+msgid "Select / Deselect All"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_Options_Hookup.php:139
+msgid "Nothing to update."
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_Options_Hookup.php:143
+msgid "Settings updated."
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_Types.php:226
+msgid "Custom CMB2 field type classes must extend CMB2_Type_Base."
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_Types.php:344
+msgid "Add Row"
+msgstr ""
+
+#: inc/cmb2/includes/CMB2_Types.php:408
+msgid "Remove Row"
+msgstr ""
+
+#: inc/cmb2/includes/helper-functions.php:308
+#: inc/codestar/classes/admin-options.class.php:516
+#: inc/codestar/classes/admin-options.class.php:639
+msgid "Save"
+msgstr ""
+
+#: inc/cmb2/includes/rest-api/CMB2_REST_Controller.php:257
+msgid "This box does not have read permissions."
+msgstr ""
+
+#: inc/cmb2/includes/rest-api/CMB2_REST_Controller.php:277
+msgid "This box does not have write permissions."
+msgstr ""
+
+#: inc/cmb2/includes/rest-api/CMB2_REST_Controller.php:300
+msgid ""
+"No box found by that id. A box needs to be registered with the \"show_in_rest"
+"\" parameter configured."
+msgstr ""
+
+#: inc/cmb2/includes/rest-api/CMB2_REST_Controller.php:378
+msgid "A human-readable description of the object."
+msgstr ""
+
+#: inc/cmb2/includes/rest-api/CMB2_REST_Controller.php:385
+msgid "The id for the object."
+msgstr ""
+
+#: inc/cmb2/includes/rest-api/CMB2_REST_Controller.php:392
+msgid "The title for the object."
+msgstr ""
+
+#: inc/cmb2/includes/rest-api/CMB2_REST_Controller_Boxes.php:51
+msgid "Includes the registered fields for the box in the response."
+msgstr ""
+
+#: inc/cmb2/includes/rest-api/CMB2_REST_Controller_Boxes.php:72
+msgid ""
+"Includes the fully rendered attributes, 'form_open', 'form_close', as well "
+"as the enqueued 'js_dependencies' script handles, and 'css_dependencies' "
+"stylesheet handles."
+msgstr ""
+
+#: inc/cmb2/includes/rest-api/CMB2_REST_Controller_Boxes.php:122
+msgid "No boxes found."
+msgstr ""
+
+#: inc/cmb2/includes/rest-api/CMB2_REST_Controller_Fields.php:27
+msgid ""
+"Includes the box object which the fields are registered to in the response."
+msgstr ""
+
+#: inc/cmb2/includes/rest-api/CMB2_REST_Controller_Fields.php:30
+msgid ""
+"When the '_rendered' argument is passed, the renderable field attributes "
+"will be returned fully rendered. By default, the names of the callback "
+"handers for the renderable attributes will be returned."
+msgstr ""
+
+#: inc/cmb2/includes/rest-api/CMB2_REST_Controller_Fields.php:33
+#: inc/cmb2/includes/rest-api/CMB2_REST_Controller_Fields.php:36
+msgid ""
+"To view or modify the field's value, the 'object_id' and 'object_type' "
+"arguments are required."
+msgstr ""
+
+#: inc/cmb2/includes/rest-api/CMB2_REST_Controller_Fields.php:236
+msgid ""
+"CMB2 Field value cannot be updated without the value parameter specified."
+msgstr ""
+
+#: inc/cmb2/includes/rest-api/CMB2_REST_Controller_Fields.php:297
+msgid ""
+"CMB2 Field value cannot be modified without the object_id and object_type "
+"parameters specified."
+msgstr ""
+
+#: inc/cmb2/includes/rest-api/CMB2_REST_Controller_Fields.php:312
+#: inc/cmb2/includes/rest-api/CMB2_REST_Controller_Fields.php:341
+msgid "No field found by that id."
+msgstr ""
+
+#: inc/cmb2/includes/rest-api/CMB2_REST_Controller_Fields.php:415
+#, php-format
+msgid "Value Error for %s"
+msgstr ""
+
+#: inc/cmb2/includes/shim/WP_REST_Controller.php:25
+#, php-format
+msgid "Method '%s' must be overridden."
+msgstr ""
+
+#: inc/cmb2/includes/shim/WP_REST_Controller.php:35
+#: inc/cmb2/includes/shim/WP_REST_Controller.php:47
+#: inc/cmb2/includes/shim/WP_REST_Controller.php:59
+#: inc/cmb2/includes/shim/WP_REST_Controller.php:71
+#: inc/cmb2/includes/shim/WP_REST_Controller.php:83
+#: inc/cmb2/includes/shim/WP_REST_Controller.php:95
+#: inc/cmb2/includes/shim/WP_REST_Controller.php:107
+#: inc/cmb2/includes/shim/WP_REST_Controller.php:119
+#: inc/cmb2/includes/shim/WP_REST_Controller.php:131
+#: inc/cmb2/includes/shim/WP_REST_Controller.php:143
+#: inc/cmb2/includes/shim/WP_REST_Controller.php:155
+#: inc/cmb2/includes/shim/WP_REST_Controller.php:168
+#, php-format
+msgid "Method '%s' not implemented. Must be overridden in subclass."
+msgstr ""
+
+#: inc/cmb2/includes/shim/WP_REST_Controller.php:273
+msgid "Current page of the collection."
+msgstr ""
+
+#: inc/cmb2/includes/shim/WP_REST_Controller.php:281
+msgid "Maximum number of items to be returned in result set."
+msgstr ""
+
+#: inc/cmb2/includes/shim/WP_REST_Controller.php:290
+msgid "Limit results to those matching a string."
+msgstr ""
+
+#: inc/cmb2/includes/shim/WP_REST_Controller.php:308
+msgid ""
+"Scope under which the request is made; determines fields present in response."
+msgstr ""
+
+#: inc/cmb2/includes/types/CMB2_Type_Counter_Base.php:50
+msgid "Words left"
+msgstr ""
+
+#: inc/cmb2/includes/types/CMB2_Type_Counter_Base.php:51
+msgid "Words"
+msgstr ""
+
+#: inc/cmb2/includes/types/CMB2_Type_Counter_Base.php:56
+msgid "Characters left"
+msgstr ""
+
+#: inc/cmb2/includes/types/CMB2_Type_Counter_Base.php:57
+msgid "Characters"
+msgstr ""
+
+#: inc/cmb2/includes/types/CMB2_Type_Counter_Base.php:62
+msgid "Your text may be truncated."
+msgstr ""
+
+#: inc/cmb2/includes/types/CMB2_Type_File.php:76
+msgid "Add or Upload File"
+msgstr ""
+
+#: inc/cmb2/includes/types/CMB2_Type_File_List.php:41
+msgid "Add or Upload Files"
+msgstr ""
+
+#: inc/cmb2/includes/types/CMB2_Type_Taxonomy_Base.php:115
+msgid "No terms"
+msgstr ""
+
+#: inc/codestar/classes/admin-options.class.php:169
+msgid "Error while saving the changes."
+msgstr ""
+
+#: inc/codestar/classes/admin-options.class.php:229
+msgid "Settings successfully imported."
+msgstr ""
+
+#: inc/codestar/classes/admin-options.class.php:241
+#: inc/codestar/classes/admin-options.class.php:257
+msgid "Default settings restored."
+msgstr ""
+
+#: inc/codestar/classes/admin-options.class.php:328
+msgid "Settings saved."
+msgstr ""
+
+#: inc/codestar/classes/admin-options.class.php:509
+msgid "You have unsaved changes, save your changes!"
+msgstr ""
+
+#: inc/codestar/classes/admin-options.class.php:511
+msgid "show all settings"
+msgstr ""
+
+#: inc/codestar/classes/admin-options.class.php:513
+#: inc/codestar/fields/icon/icon.php:57 inc/codestar/fields/map/map.php:23
+msgid "Search..."
+msgstr ""
+
+#: inc/codestar/classes/admin-options.class.php:516
+#: inc/codestar/classes/admin-options.class.php:639
+msgid "Saving..."
+msgstr ""
+
+#: inc/codestar/classes/admin-options.class.php:517
+#: inc/codestar/classes/admin-options.class.php:640
+msgid "Reset Section"
+msgstr ""
+
+#: inc/codestar/classes/admin-options.class.php:517
+#: inc/codestar/classes/admin-options.class.php:640
+msgid "Are you sure to reset this section options?"
+msgstr ""
+
+#: inc/codestar/classes/admin-options.class.php:518
+#: inc/codestar/classes/admin-options.class.php:641
+msgid "Reset All"
+msgstr ""
+
+#: inc/codestar/classes/admin-options.class.php:518
+#: inc/codestar/classes/admin-options.class.php:641
+#: inc/codestar/fields/backup/backup.php:31
+msgid "Reset"
+msgstr ""
+
+#: inc/codestar/classes/admin-options.class.php:518
+#: inc/codestar/classes/admin-options.class.php:641
+msgid "Are you sure you want to reset all settings to default values?"
+msgstr ""
+
+#: inc/codestar/classes/admin-options.class.php:616
+#: inc/codestar/fields/button_set/button_set.php:56
+#: inc/codestar/fields/checkbox/checkbox.php:82
+#: inc/codestar/fields/radio/radio.php:75
+#: inc/codestar/fields/select/select.php:113
+#: inc/codestar/functions/actions.php:41
+msgid "No data available."
+msgstr ""
+
+#: inc/codestar/classes/setup.class.php:606
+msgid "Are you sure?"
+msgstr ""
+
+#: inc/codestar/classes/setup.class.php:607
+#, php-format
+msgid "Please enter %s or more characters"
+msgstr ""
+
+#: inc/codestar/classes/setup.class.php:608
+msgid "Searching..."
+msgstr ""
+
+#: inc/codestar/classes/setup.class.php:609
+msgid "No results found."
+msgstr ""
+
+#: inc/codestar/classes/setup.class.php:710
+msgid "Oops! Not allowed."
+msgstr ""
+
+#: inc/codestar/classes/setup.class.php:778
+#: inc/codestar/classes/setup.class.php:782
+msgid "Field not found!"
+msgstr ""
+
+#: inc/codestar/fields/background/background.php:36
+#: inc/codestar/fields/media/media.php:59
+msgid "Not selected"
+msgstr ""
+
+#: inc/codestar/fields/background/background.php:72
+#: inc/codestar/fields/date/date.php:31
+#: inc/codestar/fields/datetime/datetime.php:36
+msgid "From"
+msgstr ""
+
+#: inc/codestar/fields/background/background.php:90
+#: inc/codestar/fields/date/date.php:32
+#: inc/codestar/fields/datetime/datetime.php:37
+msgid "To"
+msgstr ""
+
+#: inc/codestar/fields/background/background.php:108
+msgid "Direction"
+msgstr ""
+
+#: inc/codestar/fields/background/background.php:114
+msgid "Gradient Direction"
+msgstr ""
+
+#: inc/codestar/fields/background/background.php:115
+msgid "&#8659; top to bottom"
+msgstr ""
+
+#: inc/codestar/fields/background/background.php:116
+msgid "&#8658; left to right"
+msgstr ""
+
+#: inc/codestar/fields/background/background.php:117
+msgid "&#8664; corner top to right"
+msgstr ""
+
+#: inc/codestar/fields/background/background.php:118
+msgid "&#8665; corner top to left"
+msgstr ""
+
+#: inc/codestar/fields/background/background.php:161
+msgid "Background Position"
+msgstr ""
+
+#: inc/codestar/fields/background/background.php:162
+msgid "Left Top"
+msgstr ""
+
+#: inc/codestar/fields/background/background.php:163
+msgid "Left Center"
+msgstr ""
+
+#: inc/codestar/fields/background/background.php:164
+msgid "Left Bottom"
+msgstr ""
+
+#: inc/codestar/fields/background/background.php:165
+msgid "Center Top"
+msgstr ""
+
+#: inc/codestar/fields/background/background.php:166
+msgid "Center Center"
+msgstr ""
+
+#: inc/codestar/fields/background/background.php:167
+msgid "Center Bottom"
+msgstr ""
+
+#: inc/codestar/fields/background/background.php:168
+msgid "Right Top"
+msgstr ""
+
+#: inc/codestar/fields/background/background.php:169
+msgid "Right Center"
+msgstr ""
+
+#: inc/codestar/fields/background/background.php:170
+msgid "Right Bottom"
+msgstr ""
+
+#: inc/codestar/fields/background/background.php:184
+msgid "Background Repeat"
+msgstr ""
+
+#: inc/codestar/fields/background/background.php:185
+msgid "Repeat"
+msgstr ""
+
+#: inc/codestar/fields/background/background.php:186
+msgid "No Repeat"
+msgstr ""
+
+#: inc/codestar/fields/background/background.php:187
+msgid "Repeat Horizontally"
+msgstr ""
+
+#: inc/codestar/fields/background/background.php:188
+msgid "Repeat Vertically"
+msgstr ""
+
+#: inc/codestar/fields/background/background.php:202
+msgid "Background Attachment"
+msgstr ""
+
+#: inc/codestar/fields/background/background.php:203
+msgid "Scroll"
+msgstr ""
+
+#: inc/codestar/fields/background/background.php:204
+msgid "Fixed"
+msgstr ""
+
+#: inc/codestar/fields/background/background.php:218
+msgid "Background Size"
+msgstr ""
+
+#: inc/codestar/fields/background/background.php:219
+msgid "Cover"
+msgstr ""
+
+#: inc/codestar/fields/background/background.php:220
+msgid "Contain"
+msgstr ""
+
+#: inc/codestar/fields/background/background.php:221
+msgid "Auto"
+msgstr ""
+
+#: inc/codestar/fields/background/background.php:235
+msgid "Background Origin"
+msgstr ""
+
+#: inc/codestar/fields/background/background.php:236
+#: inc/codestar/fields/background/background.php:254
+msgid "Padding Box"
+msgstr ""
+
+#: inc/codestar/fields/background/background.php:237
+#: inc/codestar/fields/background/background.php:253
+msgid "Border Box"
+msgstr ""
+
+#: inc/codestar/fields/background/background.php:238
+#: inc/codestar/fields/background/background.php:255
+msgid "Content Box"
+msgstr ""
+
+#: inc/codestar/fields/background/background.php:252
+msgid "Background Clip"
+msgstr ""
+
+#: inc/codestar/fields/background/background.php:269
+msgid "Background Blend Mode"
+msgstr ""
+
+#: inc/codestar/fields/background/background.php:270
+#: inc/codestar/fields/link_color/link_color.php:36
+#: inc/codestar/fields/typography/typography.php:186
+msgid "Normal"
+msgstr ""
+
+#: inc/codestar/fields/background/background.php:271
+msgid "Multiply"
+msgstr ""
+
+#: inc/codestar/fields/background/background.php:272
+msgid "Screen"
+msgstr ""
+
+#: inc/codestar/fields/background/background.php:273
+msgid "Overlay"
+msgstr ""
+
+#: inc/codestar/fields/background/background.php:274
+msgid "Darken"
+msgstr ""
+
+#: inc/codestar/fields/background/background.php:275
+msgid "Lighten"
+msgstr ""
+
+#: inc/codestar/fields/background/background.php:276
+msgid "Color Dodge"
+msgstr ""
+
+#: inc/codestar/fields/background/background.php:277
+msgid "Saturation"
+msgstr ""
+
+#: inc/codestar/fields/background/background.php:278
+msgid "Color"
+msgstr ""
+
+#: inc/codestar/fields/background/background.php:279
+msgid "Luminosity"
+msgstr ""
+
+#: inc/codestar/fields/backup/backup.php:26
+msgid "Import"
+msgstr ""
+
+#: inc/codestar/fields/backup/backup.php:29
+msgid "Export & Download"
+msgstr ""
+
+#: inc/codestar/fields/border/border.php:25
+#: inc/codestar/fields/spacing/spacing.php:25
+msgid "top"
+msgstr ""
+
+#: inc/codestar/fields/border/border.php:26
+#: inc/codestar/fields/spacing/spacing.php:26
+msgid "right"
+msgstr ""
+
+#: inc/codestar/fields/border/border.php:27
+#: inc/codestar/fields/spacing/spacing.php:27
+msgid "bottom"
+msgstr ""
+
+#: inc/codestar/fields/border/border.php:28
+#: inc/codestar/fields/spacing/spacing.php:28
+msgid "left"
+msgstr ""
+
+#: inc/codestar/fields/border/border.php:29
+#: inc/codestar/fields/spacing/spacing.php:29
+msgid "all"
+msgstr ""
+
+#: inc/codestar/fields/border/border.php:51
+#: inc/codestar/fields/typography/typography.php:214
+msgid "Solid"
+msgstr ""
+
+#: inc/codestar/fields/border/border.php:52
+#: inc/codestar/fields/typography/typography.php:217
+msgid "Dashed"
+msgstr ""
+
+#: inc/codestar/fields/border/border.php:53
+#: inc/codestar/fields/typography/typography.php:216
+msgid "Dotted"
+msgstr ""
+
+#: inc/codestar/fields/border/border.php:54
+#: inc/codestar/fields/typography/typography.php:215
+msgid "Double"
+msgstr ""
+
+#: inc/codestar/fields/border/border.php:55
+msgid "Inset"
+msgstr ""
+
+#: inc/codestar/fields/border/border.php:56
+msgid "Outset"
+msgstr ""
+
+#: inc/codestar/fields/border/border.php:57
+msgid "Groove"
+msgstr ""
+
+#: inc/codestar/fields/border/border.php:58
+msgid "ridge"
+msgstr ""
+
+#: inc/codestar/fields/checkbox/checkbox.php:23
+msgid "Check/Uncheck All"
+msgstr ""
+
+#: inc/codestar/fields/dimensions/dimensions.php:22
+msgid "width"
+msgstr ""
+
+#: inc/codestar/fields/dimensions/dimensions.php:23
+msgid "height"
+msgstr ""
+
+#: inc/codestar/fields/gallery/gallery.php:20
+msgid "Add Gallery"
+msgstr ""
+
+#: inc/codestar/fields/gallery/gallery.php:21
+msgid "Edit Gallery"
+msgstr ""
+
+#: inc/codestar/fields/group/group.php:23
+msgid "Add New"
+msgstr ""
+
+#: inc/codestar/fields/group/group.php:41
+#: inc/codestar/fields/repeater/repeater.php:27
+msgid "Error: Field ID conflict."
+msgstr ""
+
+#: inc/codestar/fields/group/group.php:52
+#: inc/codestar/fields/group/group.php:107
+#: inc/codestar/fields/repeater/repeater.php:48
+#: inc/codestar/fields/repeater/repeater.php:76
+msgid "Are you sure to delete this item?"
+msgstr ""
+
+#: inc/codestar/fields/group/group.php:141
+#: inc/codestar/fields/repeater/repeater.php:89
+msgid "You cannot add more."
+msgstr ""
+
+#: inc/codestar/fields/group/group.php:142
+#: inc/codestar/fields/repeater/repeater.php:90
+msgid "You cannot remove more."
+msgstr ""
+
+#: inc/codestar/fields/icon/icon.php:20 inc/codestar/fields/icon/icon.php:53
+msgid "Add Icon"
+msgstr ""
+
+#: inc/codestar/fields/icon/icon.php:21
+msgid "Remove Icon"
+msgstr ""
+
+#: inc/codestar/fields/link/link.php:20
+msgid "Add Link"
+msgstr ""
+
+#: inc/codestar/fields/link/link.php:21
+msgid "Edit Link"
+msgstr ""
+
+#: inc/codestar/fields/link/link.php:22
+msgid "Remove Link"
+msgstr ""
+
+#: inc/codestar/fields/link_color/link_color.php:37
+msgid "Hover"
+msgstr ""
+
+#: inc/codestar/fields/link_color/link_color.php:38
+msgid "Active"
+msgstr ""
+
+#: inc/codestar/fields/link_color/link_color.php:39
+msgid "Visited"
+msgstr ""
+
+#: inc/codestar/fields/link_color/link_color.php:40
+msgid "Focus"
+msgstr ""
+
+#: inc/codestar/fields/map/map.php:24
+msgid "Latitude"
+msgstr ""
+
+#: inc/codestar/fields/map/map.php:25
+msgid "Longitude"
+msgstr ""
+
+#: inc/codestar/fields/media/media.php:25
+#: inc/codestar/fields/upload/upload.php:24
+msgid "Upload"
+msgstr ""
+
+#: inc/codestar/fields/sorter/sorter.php:21
+msgid "Enabled"
+msgstr ""
+
+#: inc/codestar/fields/sorter/sorter.php:22
+msgid "Disabled"
+msgstr ""
+
+#: inc/codestar/fields/switcher/switcher.php:20
+msgid "On"
+msgstr ""
+
+#: inc/codestar/fields/switcher/switcher.php:21
+msgid "Off"
+msgstr ""
+
+#: inc/codestar/fields/typography/typography.php:96
+msgid "Font Family"
+msgstr ""
+
+#: inc/codestar/fields/typography/typography.php:97
+msgid "Select a font"
+msgstr ""
+
+#: inc/codestar/fields/typography/typography.php:105
+msgid "Backup Font Family"
+msgstr ""
+
+#: inc/codestar/fields/typography/typography.php:130
+msgid "Font Style"
+msgstr ""
+
+#: inc/codestar/fields/typography/typography.php:144
+#: inc/codestar/fields/typography/typography.php:145
+msgid "Load Extra Styles"
+msgstr ""
+
+#: inc/codestar/fields/typography/typography.php:158
+msgid "Subset"
+msgstr ""
+
+#: inc/codestar/fields/typography/typography.php:168
+msgid "Text Align"
+msgstr ""
+
+#: inc/codestar/fields/typography/typography.php:170
+msgid "Inherit"
+msgstr ""
+
+#: inc/codestar/fields/typography/typography.php:171
+msgid "Left"
+msgstr ""
+
+#: inc/codestar/fields/typography/typography.php:172
+msgid "Center"
+msgstr ""
+
+#: inc/codestar/fields/typography/typography.php:173
+msgid "Right"
+msgstr ""
+
+#: inc/codestar/fields/typography/typography.php:174
+msgid "Justify"
+msgstr ""
+
+#: inc/codestar/fields/typography/typography.php:175
+msgid "Initial"
+msgstr ""
+
+#: inc/codestar/fields/typography/typography.php:184
+msgid "Font Variant"
+msgstr ""
+
+#: inc/codestar/fields/typography/typography.php:187
+msgid "Small Caps"
+msgstr ""
+
+#: inc/codestar/fields/typography/typography.php:188
+msgid "All Small Caps"
+msgstr ""
+
+#: inc/codestar/fields/typography/typography.php:197
+msgid "Text Transform"
+msgstr ""
+
+#: inc/codestar/fields/typography/typography.php:200
+msgid "Capitalize"
+msgstr ""
+
+#: inc/codestar/fields/typography/typography.php:201
+msgid "Uppercase"
+msgstr ""
+
+#: inc/codestar/fields/typography/typography.php:202
+msgid "Lowercase"
+msgstr ""
+
+#: inc/codestar/fields/typography/typography.php:211
+msgid "Text Decoration"
+msgstr ""
+
+#: inc/codestar/fields/typography/typography.php:218
+msgid "Wavy"
+msgstr ""
+
+#: inc/codestar/fields/typography/typography.php:219
+msgid "Overline"
+msgstr ""
+
+#: inc/codestar/fields/typography/typography.php:220
+msgid "Line-through"
+msgstr ""
+
+#: inc/codestar/fields/typography/typography.php:233
+msgid "Font Size"
+msgstr ""
+
+#: inc/codestar/fields/typography/typography.php:245
+msgid "Line Height"
+msgstr ""
+
+#: inc/codestar/fields/typography/typography.php:257
+msgid "Letter Spacing"
+msgstr ""
+
+#: inc/codestar/fields/typography/typography.php:269
+msgid "Word Spacing"
+msgstr ""
+
+#: inc/codestar/fields/typography/typography.php:284
+msgid "Font Color"
+msgstr ""
+
+#: inc/codestar/fields/typography/typography.php:295
+msgid "Custom Style"
+msgstr ""
+
+#: inc/codestar/fields/typography/typography.php:362
+msgid "Custom Web Fonts"
+msgstr ""
+
+#: inc/codestar/fields/typography/typography.php:368
+msgid "Safe Web Fonts"
+msgstr ""
+
+#: inc/codestar/fields/typography/typography.php:388
+msgid "Google Web Fonts"
+msgstr ""
+
+#: inc/codestar/functions/actions.php:16 inc/codestar/functions/actions.php:68
+#: inc/codestar/functions/actions.php:106
+#: inc/codestar/functions/actions.php:141
+#: inc/codestar/functions/actions.php:170
+msgid "Error: Invalid nonce verification."
+msgstr ""
+
+#: inc/codestar/functions/actions.php:72
+#: inc/codestar/functions/actions.php:110
+msgid "Error: Invalid key."
+msgstr ""
+
+#: inc/codestar/functions/actions.php:114
+msgid "Error: The response is not a valid JSON response."
+msgstr ""
+
+#: inc/codestar/functions/actions.php:174
+msgid "Error: Invalid term ID."
+msgstr ""
+
+#: inc/codestar/functions/actions.php:180
+msgid "Error: You do not have permission to do that."
+msgstr ""
+
+#: inc/codestar/functions/validate.php:14
+#: inc/codestar/functions/validate.php:86
+msgid "Please enter a valid email address."
+msgstr ""
+
+#: inc/codestar/functions/validate.php:32
+#: inc/codestar/functions/validate.php:106
+msgid "Please enter a valid number."
+msgstr ""
+
+#: inc/codestar/functions/validate.php:50
+#: inc/codestar/functions/validate.php:126
+msgid "This field is required."
+msgstr ""
+
+#: inc/codestar/functions/validate.php:68
+#: inc/codestar/functions/validate.php:146
+msgid "Please enter a valid URL."
+msgstr ""
+
+#: inc/codestar/samples/option-fields.php:14
+msgid "Biziver Options"
+msgstr ""
+
+#: inc/codestar/samples/option-fields.php:254
+msgid "Team Page's Title"
+msgstr ""

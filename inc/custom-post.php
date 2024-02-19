@@ -53,7 +53,7 @@ function biziver_custom_posts()
         'rewrite'    => array(
             'slug'               => 'services'
         ),
-        'menu_icon'  =>  'dashicons-share',
+        'menu_icon'  =>  'dashicons-insert',
         'capability_type' => 'page',
         'supports'     =>  array('title', 'editor', 'comments', 'revisions', 'trackbacks', 'author', 'excerpt', 'page-attributes', 'thumbnail', 'custom-fields', 'post-formats'),
 
@@ -88,7 +88,7 @@ function biziver_custom_posts()
     // Register CPT Teams
     register_post_type('biziver_teams', array(
         'labels'  =>  array(
-            'name'             => esc_html(__('Teams', 'biziver')),
+            'name'             => esc_html(__('Team', 'biziver')),
             'singular_name'    => esc_html(__('Team', 'biziver')),
             'add_new'          => esc_html(__('Add New Team', 'biziver')),
             'not_found'        => esc_html(__('not found Team', 'biziver')),
@@ -148,9 +148,9 @@ function biziver_custom_posts()
         'public'     => true,
         'rewrite'    => array(
             'slug'               => 'Portfolio'
-        ),
-        'menu_icon'  =>  'dashicons-products',
+        ),        
         'capability_type' => 'page',
+        'menu_icon' => 'dashicons-images-alt',
         'supports'     =>  array('title', 'editor', 'comments', 'revisions', 'trackbacks', 'author', 'excerpt', 'page-attributes', 'thumbnail', 'custom-fields', 'post-formats'),
 
     ));
@@ -166,11 +166,28 @@ function biziver_custom_posts()
                 'slug'     =>  'portifolio-catagory',// ths controls the base slug that will display before each term
                 'with_front'=> true // Don't display the catagory base before
             )
-
-
         ),
-        
-
     );
+
+       // Register CPT feature 
+       register_post_type('biziver-feature', array(
+        'labels'     => array(
+            'name'             => esc_html(__('Features', 'biziver')),
+            'singular_name'    => esc_html(__('Feature', 'biziver')),
+            'add_new'          => esc_html(__('Add New Feature', 'biziver')),
+            'not_found'        => esc_html(__('not Feature found', 'biziver')),
+            'add_new_item'     => esc_html(__('Add New Feature', 'biziver')),
+            'edit_item'        => esc_html(__('Edit Feature', 'biziver')),
+        ),
+        'menu_icon' => 'dashicons-visibility',
+        'public'     => true,
+        'rewrite'    => array(
+            'slug'               => 'features'
+        ),        
+        'supports'     =>  array('title', 'editor','thumbnail'),
+
+    ));      
+     
+
 };
 add_action('init', 'biziver_custom_posts');

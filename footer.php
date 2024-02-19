@@ -1,5 +1,5 @@
 <!--Footer Area-->
-<footer class="footer-area section-padding-2">
+<footer class="footer-area section-padding-footer">
     <div class="container">
         <div class="row">
             <?php
@@ -16,7 +16,7 @@
     <div class="container">
         <div class="row">
             <div class="col centered">
-                <p>Copyright &copy; <?php the_date('Y') ?> All Rights Reserved</p>
+                <p>Copyright &copy; <?php echo date('Y');?> All Rights Reserved</p>
             </div>
         </div>
     </div>

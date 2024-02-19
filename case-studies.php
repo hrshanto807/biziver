@@ -18,7 +18,7 @@ get_header()
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row" style="width: 100%;">
             <?php
             $bixiver_cases = new WP_Query(array(
                 'post_type'     =>  'biziver-cases',

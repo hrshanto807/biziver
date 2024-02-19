@@ -23,6 +23,7 @@ if (post_password_required()) {
 	<h3 class="wow fadeInUp" data-wow-delay="0.3s"><?php comments_number() ?></h3>
 	<?php wp_list_comments(array(
 		'callback' => 'biziver_comments_list',
+		'avatar_size' => '80',
 		
 	)) ?>
 

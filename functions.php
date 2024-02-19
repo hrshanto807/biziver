@@ -3,7 +3,6 @@ define('BIZIVER_TEMPLATE_DIR', get_template_directory());
 
 
 
-
 // genaral function biziver
 function biziver_general()
 
@@ -23,6 +22,8 @@ function biziver_general()
     add_image_size('biziver-team-thumb', 255, 290, false);
     add_image_size('biziver-case-thumb', 480, 480, false);
     add_image_size('biziver-portifolio-thumb', 350, 400, false);
+    add_image_size('biziver-404-thumb', 750, 500, false);
+    add_image_size('biziver-feture-thumb', 60, 60, false);
 
     register_nav_menus(array(
         'main-menu'   => __('Main Menu', 'biziver')
@@ -89,13 +90,14 @@ function biziver_all_scripts()
     wp_enqueue_style('magnific-popup', get_theme_file_uri('assets/css/magnific-popup.css'));
     wp_enqueue_style('jquery-ui', get_theme_file_uri('assets/css/jquery-ui.css'));
     wp_enqueue_style('animate', get_theme_file_uri('assets/css/animate.css'));
-    wp_enqueue_style('owl-carouse', get_theme_file_uri('assets/css/owl.carousel.min.css'));
+    wp_enqueue_style('owl-carousel', get_theme_file_uri('assets/css/owl.carousel.min.css'));
     wp_enqueue_style('biziver-main-css', get_theme_file_uri('assets/css/main.css'));
     wp_enqueue_style('biziver-stylesheet', get_theme_file_uri('style.css'));
 
 
     // all js Scripts
     wp_enqueue_script('jquery-ui-core');
+    wp_enqueue_script('jquery-ui-datepicker');
     wp_enqueue_script('popper', get_theme_file_uri('assets/js/popper.js'), array('jquery'), wp_get_theme()->get('Version'), true);
     wp_enqueue_script('bootstrap', get_theme_file_uri('assets/js/bootstrap.min.js'), array('jquery'), wp_get_theme()->get('Version'), true);
     wp_enqueue_script('owl-carousel', get_theme_file_uri('assets/js/owl.carousel.min.js'), array('jquery'), wp_get_theme()->get('Version'), true);
@@ -177,6 +179,7 @@ function biziver_comment_removed_fields($fields)
     return $fields;
 };
 add_filter('comment_form_default_fields', 'biziver_comment_removed_fields');
+// filed customixations
 
 function biziver_comment_from_fields_customaization($defaoult_fields)
 {
@@ -224,7 +227,7 @@ function biziver_comments_list($comment, $args, $depth)
 ?>
     <div class="blog-comments wow fadeInUp" data-wow-delay="0.5s">
         <div class="author-thumb">
-            <?php echo get_avatar($comment, 70) ?>
+            <?php echo get_avatar($comment, 80); ?>
         </div>
         <div class="author-comments">
             <div class="author-details">
@@ -233,24 +236,36 @@ function biziver_comments_list($comment, $args, $depth)
                     <?php comment_reply_link(array_merge($args,array( 
                         'depth'  => $depth,
                         'max_depth'=> $args['max_depth'],
-                    )))?>
+                    )));?>
                 </div>
             </div>
             <div class="author-designation">
-                <?php comment_date()?> <?php comment_time()?>
+                <?php comment_date();?> <?php comment_time();?>
             </div>
-            <?php comment_text()?>
+            <?php comment_text();?>
         </div>
     </div>
 <?php };
 
+function  bizibar_post_views(){
+    $bizibar_key = 'bizibar_views';
+    $bizibar_count = get_post_meta( get_the_ID(),  $bizibar_key, true );
 
+    if($bizibar_count == ''){
+        $bizibar_count = 0;
+        delete_post_meta( get_the_ID(),  $bizibar_key );
+        add_post_meta( get_the_ID(),  $bizibar_key,'0' );
+    }else{
+        $bizibar_count++;
+        update_post_meta(  get_the_ID(),  $bizibar_key, $bizibar_count);
+    }
+}
 
 // Aditinals files
 require_once BIZIVER_TEMPLATE_DIR . '/inc/breadcrumbs.php';
 // register custom post type
 require_once BIZIVER_TEMPLATE_DIR . '/inc/custom-post.php';
-// codestar-framework
+// codestar-framework 
 require_once BIZIVER_TEMPLATE_DIR . '/inc/codestar/codestar-framework.php';
 require_once BIZIVER_TEMPLATE_DIR . '/inc/codestar/samples/option-fields.php';
 

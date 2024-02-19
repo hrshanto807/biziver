@@ -16,10 +16,30 @@ get_header('two')
                         <div class="hero-sub">
                             <div class="table-cell">
                                 <div class="hero-left">
-                                    <h4>Financial Planning</h4>
-                                    <h1>Made Easy</h1>
-                                    <p>Sing long her way size. Waited end mutual <br> missed myself the little sister one</p>
-                                    <a href="#" class="bttn-mid btn-fill">About us</a>
+                                    <h4><?php $hero_button_subtitle = biziver_get_option('biziver-hero-subtitle');
+                                        if (!empty($hero_button_subtitle)) {
+                                            echo esc_html($hero_button_subtitle);
+                                        }
+                                        ?></h4>
+                                    <h1><?php $hero_button_title = biziver_get_option('biziver-hero-title');
+                                        if (!empty($hero_button_title)) {
+                                            echo esc_html($hero_button_title);
+                                        }
+                                        ?></h1>
+                                    <p><?php $hero_button_content = biziver_get_option('biziver-hero-textarea');
+                                        if (!empty($hero_button_content)) {
+                                            echo wp_kses($hero_button_content, biziver_allow_tags());
+                                        }
+                                        ?></p>
+                                    <a class="btn bttn-mid <?php $hero_button = biziver_get_option('biziver-hero-button');
+                                                            if (!empty($hero_button)) {
+                                                                echo esc_html($hero_button);
+                                                            }
+                                                            ?>" href="<?php the_permalink() ?>" role="button"><?php $hero_button_name = biziver_get_option('biziver-hero-button_name');
+                                                                                        if (!empty($hero_button_name)) {
+                                                                                            echo esc_html($hero_button_name);
+                                                                                        }
+                                                                                        ?></a>
                                 </div>
                             </div>
                         </div>
@@ -32,7 +52,7 @@ get_header('two')
 
 
 <!--services Area-->
-<!--feature Area-->
+
 <section class="feature-area section-padding-2">
     <div class="container">
         <div class="row justify-content-center">
@@ -78,20 +98,43 @@ get_header('two')
 
 <!--About Section-->
 <section class="about-area gray-bg">
-    <div class="about-left dark-light-overlay wow fadeInUp" data-wow-delay="0.4s" style="background: url('<?php echo get_template_directory_uri() ?>/assets/images/about-2.jpg') no-repeat center / cover;">
+    <div class="about-left dark-light-overlay wow fadeInUp" data-wow-delay="0.4s" style="background: url('<?php $bg_aboutus = biziver_get_option('biziver-aboutus-bg');
+                                                                                                            if (!empty($bg_aboutus)) {
+                                                                                                                echo esc_url($bg_aboutus['url']);
+                                                                                                            } ?>') no-repeat center / cover;">
         <div class="left-img-wrap">
-            <a href="https://www.youtube.com/watch?v=GT6-H4BRyqQ" class="video-popup"><img src="<?php echo get_template_directory_uri() ?>/assets/images/play-button.png" alt=""></a>
+            <a href="<?php $aboutus_link = biziver_get_option('biziver-aboutus-link');
+                        if (!empty($aboutus_link)) {
+                            echo esc_url($aboutus_link);
+                        } ?>" class="video-popup"><img src="<?php $aboutus_link_img = biziver_get_option('biziver-aboutus-buttonimg');
+                                                                                                        if (!empty($aboutus_link_img)) {
+                                                                                                            echo ($aboutus_link_img['url']);
+                                                                                                        } ?>" alt=""></a>
         </div>
     </div>
     <div class="about-content mid-bg-gray wow fadeInUp" data-wow-delay="0.4s">
         <div class="about-content-inner">
             <div class="section-title mb-10">
-                <h2>About us</h2>
+                <h2><?php $aboutus_title = biziver_get_option('biziver-aboutus-title');
+                    if (!empty($aboutus_title)) {
+                        echo esc_html($aboutus_title);
+                    } ?></h2>
+                <p><?php $aboutus_button_content = biziver_get_option('biziver-aboutus-textarea');
+                    if (!empty($aboutus_button_content)) {
+                        echo wp_kses($aboutus_button_content, biziver_allow_tags());
+                    }
+                    ?></p>
+                <a class="btn bttn-mid <?php $aboutus_button = biziver_get_option('biziver-aboutus-button');
+                                        if (!empty($aboutus_button)) {
+                                            echo esc_html($aboutus_button);
+                                        }
+                                        ?>" href="<?php the_permalink() ?>" role="button"><?php $aboutus_button_name = biziver_get_option('biziver-aboutus-button_name');
+                                                                                        if (!empty($aboutus_button_name)) {
+                                                                                            echo esc_html($aboutus_button_name);
+                                                                                        }
+                                                                                        ?></a>
             </div>
-            <p>Lose away off why half led have near bed. At engage simple father of period others except. <br><br>Jennings appetite disposed me an at subjects an. To no indulgence diminution so discovered mr apartments. Are off under folly death wrote cause her way spite. Plan upon yet way get cold spot its week. Almost do am or limits hearts. Resolve parties but why she shewing Are off under folly death wrote cause her way spite. Plan upon yet way get cold spot its week. Almost do am or limits hearts. Resolve parties but why she shewing</p>
-            <a href="about.html" class="bttn-mid btn-fill">Read More</a>
         </div>
-    </div>
 </section><!--/About Section-->
 
 
@@ -99,27 +142,22 @@ get_header('two')
 <section class="feature-area section-padding-2">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="single-feature">
-                    <i class="flaticon-users cl-primary"></i>
-                    <h4>Business Consulting</h4>
-                    <p>Lose away off why half led have near bed. At engage simple father of period others except giving do summer</p>
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay="0.4s">
-                <div class="single-feature">
-                    <i class="flaticon-presentation cl-mint"></i>
-                    <h4>Market Research</h4>
-                    <p>Lose away off why half led have near bed. At engage simple father of period others except giving do summer</p>
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="single-feature">
-                    <i class="flaticon-trophy cl-yellow"></i>
-                    <h4>Become Successful</h4>
-                    <p>Lose away off why half led have near bed. At engage simple father of period others except giving do summer</p>
-                </div>
-            </div>
+            <?php $biziver_feature_area = new WP_Query(array(
+                'post_type' => 'biziver-feature',
+                'posts_per_page' => 3,
+                'order' => 'asc',
+            ));
+            if ($biziver_feature_area->have_posts()) : while ($biziver_feature_area->have_posts()) : $biziver_feature_area->the_post(); ?>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="single-feature">
+                            <?php
+                            the_post_thumbnail('biziver-feture-thumb') ?>
+                            <h4><?php the_title() ?></h4>
+                            <?php the_content(); ?>
+                        </div>
+                    </div>
+            <?php endwhile;
+            endif ?>
         </div>
     </div>
 </section><!--/feature Area-->
@@ -168,7 +206,7 @@ get_header('two')
 </section><!-- /Review Area -->
 
 <!--Portfolio Section -->
-<section class="portfolio-area section-padding gray-bg">
+<section class="portfolio-area section-padding gray-bg text-center">
 
     <div class="container">
 
@@ -202,7 +240,7 @@ get_header('two')
             ));
 
             if ($biziver_portfolio->have_posts()) : while ($biziver_portfolio->have_posts()) : $biziver_portfolio->the_post();
-                    $portfollio_video = get_post_meta(get_the_ID(),'project-video',true)
+                    $portfollio_video = get_post_meta(get_the_ID(), 'project-video', true)
             ?>
 
                     <div class="portfolio-item
@@ -214,18 +252,18 @@ get_header('two')
                         endforeach;
                     endif; ?>">
 
-                    <?php 
-                     $thumbmail_url = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID()),'full');                     
-                     $portfolio_url =  $portfollio_video ? $portfollio_video : $thumbmail_url;
-                    ?>
-                        <a  href="<?php echo esc_url($portfolio_url);?>" class="thumb <?php if(!empty($portfollio_video)) : ?>video-popup<?php else:?>  popup-gallery<?php endif; ?>" title="">
+                        <?php
+                        $thumbmail_url = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID()), 'full');
+                        $portfolio_url =  $portfollio_video ? $portfollio_video : $thumbmail_url;
+                        ?>
+                        <a href="<?php echo esc_url($portfolio_url); ?>" class="thumb <?php if (!empty($portfollio_video)) : ?>video-popup<?php else : ?>  popup-gallery<?php endif; ?>" title="">
                             <?php the_post_thumbnail('biziver-portifolio-thumb') ?>
                             <div class="portfolio-hover">
                                 <div class="portfolio-description">
-                                <?php if (empty($portfollio_video)) : ?> 
-                                    <p><i class="fa fa-search"></i></p>
-                                    <h4><?php the_title() ?></h4>
-                                    <?php else:?><p><i class="fa fa-play"></i></p>
+                                    <?php if (empty($portfollio_video)) : ?>
+                                        <p><i class="fa fa-search"></i></p>
+                                        <h4><?php the_title() ?></h4>
+                                    <?php else : ?><p><i class="fa fa-play"></i></p>
                                     <?php endif; ?>
 
                                 </div>
@@ -235,8 +273,17 @@ get_header('two')
 
             <?php endwhile;
             endif ?>
-          
+
         </div>
+        <a class="mt-5 btn bttn-mid <?php $aboutus_button = biziver_get_option('biziver-aboutus-button');
+                                if (!empty($aboutus_button)) {
+                                    echo esc_html($aboutus_button);
+                                }
+                                ?>" href="<?php the_permalink() ?>" role="button"><?php $aboutus_button_name = biziver_get_option('biziver-aboutus-button_name');
+                                                                                        if (!empty($aboutus_button_name)) {
+                                                                                            echo esc_html($aboutus_button_name);
+                                                                                        }
+                                                                                        ?></a>
     </div>
 </section><!--/Portfolio Section-->
 
@@ -326,36 +373,68 @@ get_header('two')
                 'post_type'   =>  'post',
                 'posts_per_page' => 3,
             ));
+            $count = 0;
 
-            if ($biziver_blog->have_posts()) : while ($biziver_blog->have_posts()) : $biziver_blog->the_post() ?>
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="single-blog-2">
-                            <div class="single-blog-img">
-                                <?php if (has_post_thumbnail()) {
-                                    the_post_thumbnail('biziver-blog-thumb');
-                                } else echo '<img src="' . get_theme_file_uri('/<?php echo get_template_directory_uri()?>/assets/images/blog/thumbnail-default.jpg') . '"/>'; ?>
-                                <a href="<?php echo get_the_permalink() ?>"><i class="flaticon-settings-1"></i></a>
-                            </div>
-                            <div class="single-blog-content">
-                                <div class="blog-meta">
-                                    <span><a href="<?php echo get_day_link(
-                                                        get_the_time('y'),
-                                                        get_the_time('m'),
-                                                        get_the_time('d')
-                                                    ); ?>"><i class="flaticon-calendar"></i><?php echo get_the_date(); ?></a></span>
 
-                                    <span><a href="<?php echo get_the_permalink() ?>"><?php // if (function_exists('wpfp_link')) { wpfp_link(); } 
-                                                                                        ?> </a></span>
+            if ($biziver_blog->have_posts()) : while ($biziver_blog->have_posts()) : $biziver_blog->the_post();
+                    $count++ ?>
+                    <?php if ($count == 2) : ?>
+                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay="0.4s">
+                            <div class="single-blog-2">
+                                <div class="single-blog-content">
+                                    <div class="blog-meta">
+                                        <span><a href="<?php echo get_day_link(
+                                                            get_the_time('y'),
+                                                            get_the_time('m'),
+                                                            get_the_time('d')
+                                                        ); ?>"><i class="flaticon-calendar"></i><?php echo get_the_date(); ?></a></span>
 
-                                    <span><a href="<?php echo get_the_permalink() ?>"><i class="flaticon-chat"></i><?php echo get_comments_number(); ?></a></span>
+                                        <span><a href="<?php echo get_the_permalink() ?>"><?php // if (function_exists('wpfp_link')) { wpfp_link(); } 
+                                                                                            ?> </a></span>
+
+                                        <span><a href="<?php echo get_the_permalink() ?>"><i class="flaticon-chat"></i><?php echo get_comments_number(); ?></a></span>
+                                    </div>
+                                    <h3><a href="<?php echo get_the_permalink() ?>"><?php the_title() ?></a></h3>
+                                    <?php echo wp_trim_words(get_the_content(), 20, true) ?>
                                 </div>
-                                <h3><a href="<?php echo get_the_permalink() ?>"><?php the_title() ?></a></h3>
-                                <?php echo wp_trim_words(get_the_content(), 20, true) ?>
+                                <div class="single-blog-img ">
+                                    <?php if (has_post_thumbnail()) {
+                                        the_post_thumbnail('biziver-blog-thumb');
+                                    } else echo '<img src="' . get_theme_file_uri('/<?php echo get_template_directory_uri()?>/assets/images/blog/thumbnail-default.jpg') . '"/>'; ?>
+                                    <a href="<?php echo get_the_permalink() ?>"><i class="flaticon-settings-1"></i></a>
+                                </div>
+                            </div>
+                        </div><?php else :  ?>
+                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay="0.4s">
+                            <div class="single-blog-2 single-blog-order">
+                                <div class="single-blog-img">
+                                    <?php if (has_post_thumbnail()) {
+                                        the_post_thumbnail('biziver-blog-thumb');
+                                    } else echo '<img src="' . get_theme_file_uri('/<?php echo get_template_directory_uri()?>/assets/images/blog/thumbnail-default.jpg') . '"/>'; ?>
+                                    <a href="<?php echo get_the_permalink() ?>"><i class="flaticon-settings-1"></i></a>
+                                </div>
+                                <div class="single-blog-content blog-order-content">
+                                    <div class="blog-meta">
+                                        <span><a href="<?php echo get_day_link(
+                                                            get_the_time('y'),
+                                                            get_the_time('m'),
+                                                            get_the_time('d')
+                                                        ); ?>"><i class="flaticon-calendar"></i><?php echo get_the_date(); ?></a></span>
+
+                                        <span><a href="<?php echo get_the_permalink() ?>"><?php // if (function_exists('wpfp_link')) { wpfp_link(); } 
+                                                                                            ?> </a></span>
+
+                                        <span><a href="<?php echo get_the_permalink() ?>"><i class="flaticon-chat"></i><?php echo get_comments_number(); ?></a></span>
+                                    </div>
+                                    <h3><a href="<?php echo get_the_permalink() ?>"><?php the_title() ?></a></h3>
+                                    <?php echo wp_trim_words(get_the_content(), 20, true) ?>
+                                </div>
                             </div>
                         </div>
-                    </div>
-            <?php endwhile;
-            endif; ?>
+
+            <?php endif;
+                        endwhile;
+                    endif; ?>
         </div>
     </div>
 </section><!--/Blog Area-->

@@ -22,8 +22,8 @@ get_header();
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 wow fadeInRight" data-wow-delay="0.4s">
+        <div class="row justify-content-center">
+            <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 wow fadeInRight " data-wow-delay="0.4s">
                 <div class="faq-contents">
                     <ul class="accordion">
                         <?php

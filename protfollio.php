@@ -1,53 +1,83 @@
 <?php
 
 /**
- * Template Name: Services
+ * Template Name: Portfollio
  */
 get_header();
 ?>
 
-<!--feature Area-->
-<section class="feature-area section-padding-2">
+<!--Portfolio Section -->
+<section class="portfolio-area section-padding gray-bg">
+
     <div class="container">
+
         <div class="row justify-content-center">
             <div class="col-xl-6 centered wow fadeInUp" data-wow-delay="0.3s">
                 <div class="section-title">
-                    <h2><?php if (!empty(biziver_get_option('service-textone'))) {
-                            echo esc_html(biziver_get_option('service-textone'));
-                        } ?></h2>
-                    <p><?php if (!empty(biziver_get_option('service-textarea'))) {
-                            echo wp_kses(biziver_get_option('service-textarea'), biziver_allow_tags());
-                        } ?></p>
+                    <h2>Finance Portfolio</h2>
                 </div>
             </div>
         </div>
-        <div class="row justify-content-center">
+
+        <div class="text-center mb-40 wow fadeInUp" data-wow-delay="0.4s">
+            <ul class="portfolio-filter">
+                <li class="active"><a href="#" data-filter="*"> All</a></li>
+                <?php
+                $biziver_port_cat = get_terms('portifolio-cat');
+                if (!empty($biziver_port_cat)) : foreach ($biziver_port_cat as $port_cat) :
+                ?>
+                        <li><a href="#" data-filter=".<?php echo esc_attr($port_cat->slug) ?>"><?php echo esc_html($port_cat->name) ?></a></li>
+                <?php endforeach;
+                endif ?>
+            </ul>
+        </div>
+
+        <div class="row portfolio portfolio-gallery column-3 gutter wow fadeInUp" data-wow-delay="0.5s">
             <?php
-            $biziver_services = new WP_Query(array(
-                'post_type' => 'biziver-services',
-                'post_per_page' => 6,
-                'order'   => 'asc'
+            $biziver_portfolio = new WP_Query(array(
+                'post_type'   =>  'biziver-portfolio',                
+                'order' => 'asc'
             ));
-            if ($biziver_services->have_posts()) : while ($biziver_services->have_posts()) : $biziver_services->the_post();
-                    $service_icon = get_post_meta(get_the_ID(), 'services_icon', true);
-                    $service_text = get_post_meta(get_the_ID(), 'services_text', true);
+
+            if ($biziver_portfolio->have_posts()) : while ($biziver_portfolio->have_posts()) : $biziver_portfolio->the_post();
+                    $portfollio_video = get_post_meta(get_the_ID(), 'project-video', true)
             ?>
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="single-feature-2">
-                            <a href="<?php the_permalink() ?>"> <i class="<?php echo esc_attr($service_icon) ?>"></i></a>
-                            <a href="<?php the_permalink() ?>">
-                                <h4><?php the_title(); ?></h4>
-                            </a>
-                            <a href="<?php the_permalink() ?>">
-                                <p><?php echo esc_html($service_text) ?></p>
-                            </a>
-                        </div>
+
+                    <div class="portfolio-item
+                    <?php
+                    $biziver_port_the_cat = get_the_terms(get_the_ID(), 'portifolio-cat');
+
+                    if (!empty($biziver_port_the_cat)) : foreach ($biziver_port_the_cat as $the_port_cat) :
+                            echo $the_port_cat->slug . " ";
+                        endforeach;
+                    endif; ?>">
+
+                        <?php
+                        $thumbmail_url = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID()), 'full');
+                        $portfolio_url =  $portfollio_video ? $portfollio_video : $thumbmail_url;
+                        ?>
+                        <a href="<?php echo esc_url($portfolio_url); ?>" class="thumb <?php if (!empty($portfollio_video)) : ?>video-popup<?php else : ?>  popup-gallery<?php endif; ?>" title="">
+                            <?php the_post_thumbnail('biziver-portifolio-thumb') ?>
+                            <div class="portfolio-hover">
+                                <div class="portfolio-description">
+                                    <?php if (empty($portfollio_video)) : ?>
+                                        <p><i class="fa fa-search"></i></p>
+                                        <h4><?php the_title() ?></h4>
+                                    <?php else : ?><p><i class="fa fa-play"></i></p>
+                                    <?php endif; ?>
+
+                                </div>
+                            </div>
+                        </a>
                     </div>
+
             <?php endwhile;
-            endif; ?>
+            endif ?>
+
         </div>
     </div>
-</section><!--/feature Area-->
+</section><!--/Portfolio Section-->
+
 
 <!-- Review Area -->
 <section class="review-area section-padding gray-bg">

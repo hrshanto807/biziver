@@ -2,6 +2,9 @@
 <html <?php language_attributes() ?>>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta charset="<?php bloginfo('charset'); ?>">
     <?php wp_head() ?>
 </head>
 
@@ -17,15 +20,37 @@
 
 
         <!--Header Top-->
-        <div class="header-top white-bg">
+        <div class="header-top  white-bg">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
                         <div class="single-header-top">
                             <p>
-                                <span><i class="fa fa-clock-o"></i>Mon - Fri : 09:00 - 17:00</span>
-                                <span><a href="mailto:"><i class="fa fa-envelope"></i>info@bizever.com</a></span>
-                                <span><a href="tel:"><i class="fa fa-phone"></i>+0088-123-789</a></span>
+                                <span><i class="<?php $time_icon = biziver_get_option('heading_time_icon');
+                                                if (!empty($time_icon)) {
+                                                    echo $time_icon;
+                                                } ?>"></i><?php $time_set = biziver_get_option('heading_time_date');
+                                                                                if (!empty($time_icon)) {
+                                                                                    echo esc_html($time_set);
+                                                                                } ?></span>
+                                <span><a href="mailto:"><i class="<?php $email_icon = biziver_get_option('heading_email_icon');
+                                                                    if (!empty($email_icon)) {
+                                                                        echo $email_icon;
+                                                                    } ?>"></i>
+                                        <?php $email_set = biziver_get_option('email_set_heading');
+                                        if (!empty($email_set)) {
+                                            echo $email_set;
+                                        }
+                                        ?> </a></span>
+                                <span><a href="tel:"><i class="<?php $email_icon = biziver_get_option('heading_number_icon');
+                                                                if (!empty($email_icon)) {
+                                                                    echo $email_icon;
+                                                                } ?>"></i>
+                                        <?php $email_set = biziver_get_option('heading_number_set');
+                                        if (!empty($email_set)) {
+                                            echo $email_set;
+                                        }
+                                        ?></a></span>
                             </p>
                         </div>
                     </div>
@@ -46,7 +71,7 @@
         </div><!--/Header Top-->
 
         <!--Header Area-->
-        <header class="header-area black-bg">
+        <header class="header-area home-header black-bg">
             <nav class="navbar navbar-expand-lg main-menu">
                 <div class="container">
 
@@ -73,7 +98,7 @@
                         //     $main_menu_list
                         // );                    
                         // echo $main_menu;
-                        ?>                        
+                        ?>
                         <div class="header-btn justify-content-end">
                             <button type="button" class="search-btn"><i class="fa fa-search"></i></button>
                         </div>

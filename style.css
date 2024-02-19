@@ -26,40 +26,53 @@ Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, feature
 
 
 .navbar>.container.left_menu {
-    display: flex;
-    flex-direction: row-reverse;  
+  display: flex;
+  flex-direction: row-reverse;
 
 }
-.navbar>.container.left_menu .navbar-collapse ul.ml-auto{
-    margin: 0 !important; 
+
+.navbar>.container.left_menu .navbar-collapse ul.ml-auto {
+  margin: 0 !important;
 }
 
 .navbar>.container.center_menu {
-    display: flex;
-    flex-direction: column; 
-    justify-content: center; 
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
 }
 
 /* ========================================================== */
-.faq-contents .accordion li {    
-    width: 47%;
-    float: left;
-    margin-right: 20px;
-  }
+.faq-contents .accordion li {
+  width: 100%; 
+  margin-right: 20px;
+}
 
-  .site-sidebar .single-sidebar form input {
-    padding-top: 10px;  
-  }
+.site-sidebar .single-sidebar form input {
+  padding-top: 10px;
+}
 
-  .case-studies-order:nth-child(4n) .case-studies-img{
-    order: 2;
-  }
-  
+.case-studies-order:nth-child(4n) .case-studies-img {
+  order: 2;
+}
 
-  .case-studies-order:nth-child(3n) .case-studies-img{
-    order: 2;
-  }
-  
-  
+
+.case-studies-order:nth-child(3n) .case-studies-img {
+  order: 2;
+}
+
+.contact-form .wpcf7-form-control.wpcf7-submit.has-spinner {
+  position: relative;
+  font-size: 16px;
+  font-weight: 600;
+  display: inline-block;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: 0.4s;
+  letter-spacing: 1px;
+  color: #ffffff;
+  background: #86BC42;
+
+}
